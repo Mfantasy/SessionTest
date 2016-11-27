@@ -26,13 +26,38 @@ namespace SessionTest.Controls
             this.CaptionText = "Caption";
             this.SizeChanged += MenuButtonPanel_SizeChanged;
             this.MouseDown += MenuButtonPanel_MouseDown;
+            this.MouseEnter += MenuButtonPanel_MouseEnter;
+            this.MouseLeave += MenuButtonPanel_MouseLeave;
+            CaptionLabel.MouseDown += MenuButtonPanel_MouseDown;
+            CaptionLabel.MouseEnter += MenuButtonPanel_MouseEnter;
+            CaptionLabel.MouseLeave += MenuButtonPanel_MouseLeave;
+            this.DoubleBuffered = true;
         }
 
+        private void MenuButtonPanel_MouseLeave(object sender, EventArgs e)
+        {
+            if (!IsDown)
+            {
+                ShowDefaultImage(null, null);
+            }
+        }
+
+        private void MenuButtonPanel_MouseEnter(object sender, EventArgs e)
+        {
+            ShowCheckedImage(null, null);
+        }
+
+        public bool IsDown = false;
         private void MenuButtonPanel_MouseDown(object sender, MouseEventArgs e)
         {
             ShowCheckedImage(sender, e);
             AppContextRecord.ClickMenuButton(this);
-            //绑定panel   //上次点击出现的panel隐藏
+            Panel content = this.Panel;
+            IsDown = true;
+            if (content != null)
+            {
+                content.BringToFront(); 
+            }
         }
 
         public void ShowCheckedImage(object sender, MouseEventArgs e)
@@ -56,18 +81,11 @@ namespace SessionTest.Controls
             this.CaptionLabel.Location = new Point((this.Width - CaptionLabel.Width) / 2, (this.Height - CaptionLabel.Height) - 5);
         }
 
-        public Label CaptionLabel { get; set; }
-
         [Browsable(true)]
-        public UserControl BindedPanel
-        {
-            get { return BindedPanel; }
-            set
-            {
-                this.BindedPanel = value;
-                this.BindedPanel.Dock = DockStyle.Fill;
-            }
-        }
+        public Panel Panel { get; set; }
+
+
+        public Label CaptionLabel { get; set; }
 
         [Browsable(true)]
         public string CaptionText

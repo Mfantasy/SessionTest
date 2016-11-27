@@ -20,6 +20,7 @@ namespace SessionTest
             else if (lastMenuItem != sender)
             {
                 lastMenuItem.ShowDefaultImage(null, null);
+                lastMenuItem.IsDown = false;
                 lastMenuItem = sender;
             }
         }
