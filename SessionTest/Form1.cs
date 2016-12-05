@@ -17,7 +17,7 @@ using System.Text.RegularExpressions;
 namespace SessionTest
 {
     public partial class MainForm : Form
-    {
+    {    
         public MainForm()
         {
             InitializeComponent();
@@ -55,9 +55,33 @@ namespace SessionTest
             }                                     
         }
 
-    
 
-
+        #region 端口扫描
+        void AddDataSc(string x)
+        {
+            int i = x.IndexOf('/');
+            string y1 = x.Remove(i);
+            string x2 = x.Remove(0, i + 1).Trim();
+            string y2 = x2.Remove(3);
+            string x3 = x2.Remove(0, 3 + 1).Trim();
+            int i3 = x3.IndexOf(' ');
+            string y3 = x3.Remove(i3);
+            string x4 = x3.Remove(0, i3 + 1).Trim();
+            int i4 = x4.IndexOf(' ');
+            string y4 = "";
+            string y5 = "";
+            if (i4 != -1)
+            {
+                y4 = x4.Remove(i4);
+                y5 = x4.Remove(0, i4 + 1).Trim();
+            }
+            else
+            {
+                y4 = x4;
+            }
+            //Console.WriteLine("{0}\r\n{1}\r\n{2}\r\n{3}\r\n{4}", y1, y2, y3, y4, y5);
+            dvSc.Rows.Add(y1, y2, y3, y4, y5);
+        }
         private void label2_Click(object sender, EventArgs e)
         {
             NmapPortScan("192.168.10.1");
@@ -136,15 +160,16 @@ namespace SessionTest
                     }
                 }
                 else if(mode == 1)
-                {              
+                {         
+                         
                     if(line.StartsWith("Nmap scan report for "))
                     {
-                        Console.WriteLine(line.Replace("Nmap scan report for ", ""));
+                        //Console.WriteLine(line.Replace("Nmap scan report for ", ""));
+                        label2.Text = line.Replace("Nmap scan report for ", "");
                     }
                     else if (rNum.IsMatch(line))
                     {
-                        Console.WriteLine(line);
-                        var x = line.Split('/');
+                        AddDataSc(line);
                     }
                     else if (line.StartsWith("MAC Address"))
                     {
@@ -164,6 +189,16 @@ namespace SessionTest
                     return;
                 }
             }
+            if (dvSc.Rows.Count != 0)
+            {
+                int y = dvSc.Rows[0].Height * (dvSc.Rows.Count+2);
+                Button btn = new Button();
+                btn.Location = new Point(10, y);
+                btn.Text = "哈哈";
+                btn.Visible = true;
+                btn.Parent = panel端口扫描;
+                btn.BringToFront();
+            }
         }
 
         bool NmapPortScan(string ip)
@@ -177,21 +212,24 @@ namespace SessionTest
             return Nmap(arg, 0);
         }
         #endregion
+        #endregion
         #region 连接管理
-        void CircleGetIp()
-        {
-                
-        }
-
-        void CreateServer()
-        {
-
-        }
 
         void ScanIpsL()
         {
 
         }
+       
+        void CircleGetIp()
+        {
+
+        }
+        void CreateServer()
+        {
+
+        }
+
+
         #endregion
     }
 }

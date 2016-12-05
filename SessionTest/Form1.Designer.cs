@@ -35,39 +35,39 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.layoutTop = new System.Windows.Forms.FlowLayoutPanel();
+            this.menuButtonPanel1 = new SessionTest.Controls.MenuButtonPanel();
             this.panel首页 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel连接管理 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel端口扫描 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panelCoap测试 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panelMQTT测试 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel测试报告 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.panelContext = new System.Windows.Forms.Panel();
-            this.layoutBottom = new System.Windows.Forms.FlowLayoutPanel();
-            this.menuButtonPanel1 = new SessionTest.Controls.MenuButtonPanel();
             this.menuButtonPanel3 = new SessionTest.Controls.MenuButtonPanel();
-            this.menuButtonPanel5 = new SessionTest.Controls.MenuButtonPanel();
-            this.menuButtonPanel4 = new SessionTest.Controls.MenuButtonPanel();
-            this.menuButtonPanel2 = new SessionTest.Controls.MenuButtonPanel();
-            this.menuButtonPanel6 = new SessionTest.Controls.MenuButtonPanel();
-            this.customgDataView1 = new SessionTest.Controls.CustomgDataView();
+            this.panel连接管理 = new System.Windows.Forms.Panel();
+            this.dvCn = new SessionTest.Controls.CustomgDataView();
             this.nameCn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.typeCn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ipCn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.timeCn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.doCn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customgDataView2 = new SessionTest.Controls.CustomgDataView();
+            this.label3 = new System.Windows.Forms.Label();
+            this.menuButtonPanel5 = new SessionTest.Controls.MenuButtonPanel();
+            this.panel端口扫描 = new System.Windows.Forms.Panel();
+            this.dvSc = new SessionTest.Controls.CustomgDataView();
             this.portSc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.typeSc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stateSc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.serverSc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.versionSc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label2 = new System.Windows.Forms.Label();
+            this.menuButtonPanel4 = new SessionTest.Controls.MenuButtonPanel();
+            this.panelCoap测试 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.menuButtonPanel2 = new SessionTest.Controls.MenuButtonPanel();
+            this.panelMQTT测试 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.menuButtonPanel6 = new SessionTest.Controls.MenuButtonPanel();
+            this.panel测试报告 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panelContext = new System.Windows.Forms.Panel();
+            this.layoutBottom = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -76,14 +76,14 @@
             this.panel首页.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel连接管理.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dvCn)).BeginInit();
             this.panel端口扫描.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dvSc)).BeginInit();
             this.panelCoap测试.SuspendLayout();
             this.panelMQTT测试.SuspendLayout();
             this.panel测试报告.SuspendLayout();
             this.panelContext.SuspendLayout();
             this.layoutBottom.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.customgDataView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customgDataView2)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -121,6 +121,20 @@
             this.layoutTop.Size = new System.Drawing.Size(800, 118);
             this.layoutTop.TabIndex = 0;
             // 
+            // menuButtonPanel1
+            // 
+            this.menuButtonPanel1.BackColor = System.Drawing.Color.Black;
+            this.menuButtonPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.menuButtonPanel1.CaptionText = "首页";
+            this.menuButtonPanel1.CheckedImage = ((System.Drawing.Image)(resources.GetObject("menuButtonPanel1.CheckedImage")));
+            this.menuButtonPanel1.DefaultImage = ((System.Drawing.Image)(resources.GetObject("menuButtonPanel1.DefaultImage")));
+            this.menuButtonPanel1.Location = new System.Drawing.Point(10, 10);
+            this.menuButtonPanel1.Margin = new System.Windows.Forms.Padding(10);
+            this.menuButtonPanel1.Name = "menuButtonPanel1";
+            this.menuButtonPanel1.Panel = this.panel首页;
+            this.menuButtonPanel1.Size = new System.Drawing.Size(94, 94);
+            this.menuButtonPanel1.TabIndex = 0;
+            // 
             // panel首页
             // 
             this.panel首页.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -156,160 +170,6 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // panel连接管理
-            // 
-            this.panel连接管理.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel连接管理.Controls.Add(this.customgDataView1);
-            this.panel连接管理.Controls.Add(this.label3);
-            this.panel连接管理.Location = new System.Drawing.Point(500, 0);
-            this.panel连接管理.Margin = new System.Windows.Forms.Padding(0);
-            this.panel连接管理.Name = "panel连接管理";
-            this.panel连接管理.Size = new System.Drawing.Size(100, 50);
-            this.panel连接管理.TabIndex = 2;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(0, 0);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 15);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "连接管理";
-            // 
-            // panel端口扫描
-            // 
-            this.panel端口扫描.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel端口扫描.Controls.Add(this.customgDataView2);
-            this.panel端口扫描.Controls.Add(this.label2);
-            this.panel端口扫描.Location = new System.Drawing.Point(400, 0);
-            this.panel端口扫描.Margin = new System.Windows.Forms.Padding(0);
-            this.panel端口扫描.Name = "panel端口扫描";
-            this.panel端口扫描.Size = new System.Drawing.Size(100, 50);
-            this.panel端口扫描.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(0, 0);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 15);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "端口扫描";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // panelCoap测试
-            // 
-            this.panelCoap测试.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panelCoap测试.Controls.Add(this.label4);
-            this.panelCoap测试.Location = new System.Drawing.Point(0, 0);
-            this.panelCoap测试.Margin = new System.Windows.Forms.Padding(0);
-            this.panelCoap测试.Name = "panelCoap测试";
-            this.panelCoap测试.Size = new System.Drawing.Size(100, 50);
-            this.panelCoap测试.TabIndex = 3;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(0, 0);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(99, 15);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Coap协议测试";
-            // 
-            // panelMQTT测试
-            // 
-            this.panelMQTT测试.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panelMQTT测试.Controls.Add(this.label5);
-            this.panelMQTT测试.Location = new System.Drawing.Point(100, 0);
-            this.panelMQTT测试.Margin = new System.Windows.Forms.Padding(0);
-            this.panelMQTT测试.Name = "panelMQTT测试";
-            this.panelMQTT测试.Size = new System.Drawing.Size(100, 50);
-            this.panelMQTT测试.TabIndex = 4;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(0, 0);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(99, 15);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "MQTT协议测试";
-            // 
-            // panel测试报告
-            // 
-            this.panel测试报告.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel测试报告.Controls.Add(this.label6);
-            this.panel测试报告.Location = new System.Drawing.Point(200, 0);
-            this.panel测试报告.Margin = new System.Windows.Forms.Padding(0);
-            this.panel测试报告.Name = "panel测试报告";
-            this.panel测试报告.Size = new System.Drawing.Size(100, 50);
-            this.panel测试报告.TabIndex = 5;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(0, 0);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(67, 15);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "测试报告";
-            // 
-            // panelContext
-            // 
-            this.panelContext.BackColor = System.Drawing.Color.White;
-            this.panelContext.Controls.Add(this.layoutBottom);
-            this.panelContext.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContext.Location = new System.Drawing.Point(0, 0);
-            this.panelContext.Margin = new System.Windows.Forms.Padding(0);
-            this.panelContext.Name = "panelContext";
-            this.panelContext.Size = new System.Drawing.Size(800, 481);
-            this.panelContext.TabIndex = 0;
-            // 
-            // layoutBottom
-            // 
-            this.layoutBottom.BackColor = System.Drawing.Color.LightGreen;
-            this.layoutBottom.Controls.Add(this.panelCoap测试);
-            this.layoutBottom.Controls.Add(this.panelMQTT测试);
-            this.layoutBottom.Controls.Add(this.panel测试报告);
-            this.layoutBottom.Controls.Add(this.panel首页);
-            this.layoutBottom.Controls.Add(this.panel端口扫描);
-            this.layoutBottom.Controls.Add(this.panel连接管理);
-            this.layoutBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.layoutBottom.Location = new System.Drawing.Point(0, 396);
-            this.layoutBottom.Margin = new System.Windows.Forms.Padding(0);
-            this.layoutBottom.Name = "layoutBottom";
-            this.layoutBottom.Size = new System.Drawing.Size(800, 85);
-            this.layoutBottom.TabIndex = 1;
-            // 
-            // menuButtonPanel1
-            // 
-            this.menuButtonPanel1.BackColor = System.Drawing.Color.Black;
-            this.menuButtonPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.menuButtonPanel1.CaptionText = "首页";
-            this.menuButtonPanel1.CheckedImage = ((System.Drawing.Image)(resources.GetObject("menuButtonPanel1.CheckedImage")));
-            this.menuButtonPanel1.DefaultImage = ((System.Drawing.Image)(resources.GetObject("menuButtonPanel1.DefaultImage")));
-            this.menuButtonPanel1.Location = new System.Drawing.Point(10, 10);
-            this.menuButtonPanel1.Margin = new System.Windows.Forms.Padding(10);
-            this.menuButtonPanel1.Name = "menuButtonPanel1";
-            this.menuButtonPanel1.Panel = this.panel首页;
-            this.menuButtonPanel1.Size = new System.Drawing.Size(94, 94);
-            this.menuButtonPanel1.TabIndex = 0;
-            // 
             // menuButtonPanel3
             // 
             this.menuButtonPanel3.BackColor = System.Drawing.Color.Black;
@@ -324,70 +184,25 @@
             this.menuButtonPanel3.Size = new System.Drawing.Size(94, 94);
             this.menuButtonPanel3.TabIndex = 2;
             // 
-            // menuButtonPanel5
+            // panel连接管理
             // 
-            this.menuButtonPanel5.BackColor = System.Drawing.Color.Black;
-            this.menuButtonPanel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.menuButtonPanel5.CaptionText = "端口扫描";
-            this.menuButtonPanel5.CheckedImage = ((System.Drawing.Image)(resources.GetObject("menuButtonPanel5.CheckedImage")));
-            this.menuButtonPanel5.DefaultImage = ((System.Drawing.Image)(resources.GetObject("menuButtonPanel5.DefaultImage")));
-            this.menuButtonPanel5.Location = new System.Drawing.Point(238, 10);
-            this.menuButtonPanel5.Margin = new System.Windows.Forms.Padding(10);
-            this.menuButtonPanel5.Name = "menuButtonPanel5";
-            this.menuButtonPanel5.Panel = this.panel端口扫描;
-            this.menuButtonPanel5.Size = new System.Drawing.Size(94, 94);
-            this.menuButtonPanel5.TabIndex = 4;
+            this.panel连接管理.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel连接管理.Controls.Add(this.dvCn);
+            this.panel连接管理.Controls.Add(this.label3);
+            this.panel连接管理.Location = new System.Drawing.Point(400, 0);
+            this.panel连接管理.Margin = new System.Windows.Forms.Padding(0);
+            this.panel连接管理.Name = "panel连接管理";
+            this.panel连接管理.Size = new System.Drawing.Size(100, 50);
+            this.panel连接管理.TabIndex = 2;
             // 
-            // menuButtonPanel4
+            // dvCn
             // 
-            this.menuButtonPanel4.BackColor = System.Drawing.Color.Black;
-            this.menuButtonPanel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.menuButtonPanel4.CaptionText = "Coap测试";
-            this.menuButtonPanel4.CheckedImage = ((System.Drawing.Image)(resources.GetObject("menuButtonPanel4.CheckedImage")));
-            this.menuButtonPanel4.DefaultImage = ((System.Drawing.Image)(resources.GetObject("menuButtonPanel4.DefaultImage")));
-            this.menuButtonPanel4.Location = new System.Drawing.Point(352, 10);
-            this.menuButtonPanel4.Margin = new System.Windows.Forms.Padding(10);
-            this.menuButtonPanel4.Name = "menuButtonPanel4";
-            this.menuButtonPanel4.Panel = this.panelCoap测试;
-            this.menuButtonPanel4.Size = new System.Drawing.Size(94, 94);
-            this.menuButtonPanel4.TabIndex = 3;
-            // 
-            // menuButtonPanel2
-            // 
-            this.menuButtonPanel2.BackColor = System.Drawing.Color.Black;
-            this.menuButtonPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.menuButtonPanel2.CaptionText = "MQTT测试";
-            this.menuButtonPanel2.CheckedImage = ((System.Drawing.Image)(resources.GetObject("menuButtonPanel2.CheckedImage")));
-            this.menuButtonPanel2.DefaultImage = ((System.Drawing.Image)(resources.GetObject("menuButtonPanel2.DefaultImage")));
-            this.menuButtonPanel2.Location = new System.Drawing.Point(466, 10);
-            this.menuButtonPanel2.Margin = new System.Windows.Forms.Padding(10);
-            this.menuButtonPanel2.Name = "menuButtonPanel2";
-            this.menuButtonPanel2.Panel = this.panelMQTT测试;
-            this.menuButtonPanel2.Size = new System.Drawing.Size(94, 94);
-            this.menuButtonPanel2.TabIndex = 1;
-            // 
-            // menuButtonPanel6
-            // 
-            this.menuButtonPanel6.BackColor = System.Drawing.Color.Black;
-            this.menuButtonPanel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.menuButtonPanel6.CaptionText = "分析报告";
-            this.menuButtonPanel6.CheckedImage = ((System.Drawing.Image)(resources.GetObject("menuButtonPanel6.CheckedImage")));
-            this.menuButtonPanel6.DefaultImage = ((System.Drawing.Image)(resources.GetObject("menuButtonPanel6.DefaultImage")));
-            this.menuButtonPanel6.Location = new System.Drawing.Point(580, 10);
-            this.menuButtonPanel6.Margin = new System.Windows.Forms.Padding(10);
-            this.menuButtonPanel6.Name = "menuButtonPanel6";
-            this.menuButtonPanel6.Panel = this.panel测试报告;
-            this.menuButtonPanel6.Size = new System.Drawing.Size(94, 94);
-            this.menuButtonPanel6.TabIndex = 2;
-            // 
-            // customgDataView1
-            // 
-            this.customgDataView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.customgDataView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.customgDataView1.BackgroundColor = System.Drawing.Color.White;
-            this.customgDataView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.customgDataView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
-            this.customgDataView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            this.dvCn.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dvCn.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dvCn.BackgroundColor = System.Drawing.Color.White;
+            this.dvCn.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dvCn.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
+            this.dvCn.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("宋体", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -395,9 +210,9 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.customgDataView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.customgDataView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.customgDataView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dvCn.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dvCn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvCn.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nameCn,
             this.typeCn,
             this.ipCn,
@@ -410,16 +225,16 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.customgDataView1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.customgDataView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.customgDataView1.GridColor = System.Drawing.Color.SkyBlue;
-            this.customgDataView1.Location = new System.Drawing.Point(0, 15);
-            this.customgDataView1.Name = "customgDataView1";
-            this.customgDataView1.ReadOnly = true;
-            this.customgDataView1.RowHeadersVisible = false;
-            this.customgDataView1.RowTemplate.Height = 27;
-            this.customgDataView1.Size = new System.Drawing.Size(100, 35);
-            this.customgDataView1.TabIndex = 2;
+            this.dvCn.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dvCn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dvCn.GridColor = System.Drawing.Color.SkyBlue;
+            this.dvCn.Location = new System.Drawing.Point(0, 15);
+            this.dvCn.Name = "dvCn";
+            this.dvCn.ReadOnly = true;
+            this.dvCn.RowHeadersVisible = false;
+            this.dvCn.RowTemplate.Height = 27;
+            this.dvCn.Size = new System.Drawing.Size(100, 35);
+            this.dvCn.TabIndex = 2;
             // 
             // nameCn
             // 
@@ -451,14 +266,52 @@
             this.doCn.Name = "doCn";
             this.doCn.ReadOnly = true;
             // 
-            // customgDataView2
+            // label3
             // 
-            this.customgDataView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.customgDataView2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.customgDataView2.BackgroundColor = System.Drawing.Color.White;
-            this.customgDataView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.customgDataView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
-            this.customgDataView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            this.label3.AutoSize = true;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(0, 0);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(67, 15);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "连接管理";
+            // 
+            // menuButtonPanel5
+            // 
+            this.menuButtonPanel5.BackColor = System.Drawing.Color.Black;
+            this.menuButtonPanel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.menuButtonPanel5.CaptionText = "端口扫描";
+            this.menuButtonPanel5.CheckedImage = ((System.Drawing.Image)(resources.GetObject("menuButtonPanel5.CheckedImage")));
+            this.menuButtonPanel5.DefaultImage = ((System.Drawing.Image)(resources.GetObject("menuButtonPanel5.DefaultImage")));
+            this.menuButtonPanel5.Location = new System.Drawing.Point(238, 10);
+            this.menuButtonPanel5.Margin = new System.Windows.Forms.Padding(10);
+            this.menuButtonPanel5.Name = "menuButtonPanel5";
+            this.menuButtonPanel5.Panel = this.panel端口扫描;
+            this.menuButtonPanel5.Size = new System.Drawing.Size(94, 94);
+            this.menuButtonPanel5.TabIndex = 4;
+            // 
+            // panel端口扫描
+            // 
+            this.panel端口扫描.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel端口扫描.Controls.Add(this.dvSc);
+            this.panel端口扫描.Controls.Add(this.label2);
+            this.panel端口扫描.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel端口扫描.Location = new System.Drawing.Point(0, 0);
+            this.panel端口扫描.Margin = new System.Windows.Forms.Padding(0);
+            this.panel端口扫描.Name = "panel端口扫描";
+            this.panel端口扫描.Size = new System.Drawing.Size(800, 481);
+            this.panel端口扫描.TabIndex = 1;
+            // 
+            // dvSc
+            // 
+            this.dvSc.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dvSc.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dvSc.BackgroundColor = System.Drawing.Color.White;
+            this.dvSc.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dvSc.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
+            this.dvSc.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("宋体", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -466,9 +319,9 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.customgDataView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.customgDataView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.customgDataView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dvSc.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dvSc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvSc.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.portSc,
             this.typeSc,
             this.stateSc,
@@ -481,16 +334,16 @@
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.customgDataView2.DefaultCellStyle = dataGridViewCellStyle4;
-            this.customgDataView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.customgDataView2.GridColor = System.Drawing.Color.SkyBlue;
-            this.customgDataView2.Location = new System.Drawing.Point(0, 15);
-            this.customgDataView2.Name = "customgDataView2";
-            this.customgDataView2.ReadOnly = true;
-            this.customgDataView2.RowHeadersVisible = false;
-            this.customgDataView2.RowTemplate.Height = 27;
-            this.customgDataView2.Size = new System.Drawing.Size(100, 35);
-            this.customgDataView2.TabIndex = 3;
+            this.dvSc.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dvSc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dvSc.GridColor = System.Drawing.Color.SkyBlue;
+            this.dvSc.Location = new System.Drawing.Point(0, 15);
+            this.dvSc.Name = "dvSc";
+            this.dvSc.ReadOnly = true;
+            this.dvSc.RowHeadersVisible = false;
+            this.dvSc.RowTemplate.Height = 27;
+            this.dvSc.Size = new System.Drawing.Size(800, 466);
+            this.dvSc.TabIndex = 3;
             // 
             // portSc
             // 
@@ -522,6 +375,154 @@
             this.versionSc.Name = "versionSc";
             this.versionSc.ReadOnly = true;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(67, 15);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "端口扫描";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // menuButtonPanel4
+            // 
+            this.menuButtonPanel4.BackColor = System.Drawing.Color.Black;
+            this.menuButtonPanel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.menuButtonPanel4.CaptionText = "Coap测试";
+            this.menuButtonPanel4.CheckedImage = ((System.Drawing.Image)(resources.GetObject("menuButtonPanel4.CheckedImage")));
+            this.menuButtonPanel4.DefaultImage = ((System.Drawing.Image)(resources.GetObject("menuButtonPanel4.DefaultImage")));
+            this.menuButtonPanel4.Location = new System.Drawing.Point(352, 10);
+            this.menuButtonPanel4.Margin = new System.Windows.Forms.Padding(10);
+            this.menuButtonPanel4.Name = "menuButtonPanel4";
+            this.menuButtonPanel4.Panel = this.panelCoap测试;
+            this.menuButtonPanel4.Size = new System.Drawing.Size(94, 94);
+            this.menuButtonPanel4.TabIndex = 3;
+            // 
+            // panelCoap测试
+            // 
+            this.panelCoap测试.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panelCoap测试.Controls.Add(this.label4);
+            this.panelCoap测试.Location = new System.Drawing.Point(0, 0);
+            this.panelCoap测试.Margin = new System.Windows.Forms.Padding(0);
+            this.panelCoap测试.Name = "panelCoap测试";
+            this.panelCoap测试.Size = new System.Drawing.Size(100, 50);
+            this.panelCoap测试.TabIndex = 3;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label4.ForeColor = System.Drawing.Color.Red;
+            this.label4.Location = new System.Drawing.Point(0, 0);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(99, 15);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Coap协议测试";
+            // 
+            // menuButtonPanel2
+            // 
+            this.menuButtonPanel2.BackColor = System.Drawing.Color.Black;
+            this.menuButtonPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.menuButtonPanel2.CaptionText = "MQTT测试";
+            this.menuButtonPanel2.CheckedImage = ((System.Drawing.Image)(resources.GetObject("menuButtonPanel2.CheckedImage")));
+            this.menuButtonPanel2.DefaultImage = ((System.Drawing.Image)(resources.GetObject("menuButtonPanel2.DefaultImage")));
+            this.menuButtonPanel2.Location = new System.Drawing.Point(466, 10);
+            this.menuButtonPanel2.Margin = new System.Windows.Forms.Padding(10);
+            this.menuButtonPanel2.Name = "menuButtonPanel2";
+            this.menuButtonPanel2.Panel = this.panelMQTT测试;
+            this.menuButtonPanel2.Size = new System.Drawing.Size(94, 94);
+            this.menuButtonPanel2.TabIndex = 1;
+            // 
+            // panelMQTT测试
+            // 
+            this.panelMQTT测试.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panelMQTT测试.Controls.Add(this.label5);
+            this.panelMQTT测试.Location = new System.Drawing.Point(100, 0);
+            this.panelMQTT测试.Margin = new System.Windows.Forms.Padding(0);
+            this.panelMQTT测试.Name = "panelMQTT测试";
+            this.panelMQTT测试.Size = new System.Drawing.Size(100, 50);
+            this.panelMQTT测试.TabIndex = 4;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.Location = new System.Drawing.Point(0, 0);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(99, 15);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "MQTT协议测试";
+            // 
+            // menuButtonPanel6
+            // 
+            this.menuButtonPanel6.BackColor = System.Drawing.Color.Black;
+            this.menuButtonPanel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.menuButtonPanel6.CaptionText = "分析报告";
+            this.menuButtonPanel6.CheckedImage = ((System.Drawing.Image)(resources.GetObject("menuButtonPanel6.CheckedImage")));
+            this.menuButtonPanel6.DefaultImage = ((System.Drawing.Image)(resources.GetObject("menuButtonPanel6.DefaultImage")));
+            this.menuButtonPanel6.Location = new System.Drawing.Point(580, 10);
+            this.menuButtonPanel6.Margin = new System.Windows.Forms.Padding(10);
+            this.menuButtonPanel6.Name = "menuButtonPanel6";
+            this.menuButtonPanel6.Panel = this.panel测试报告;
+            this.menuButtonPanel6.Size = new System.Drawing.Size(94, 94);
+            this.menuButtonPanel6.TabIndex = 2;
+            // 
+            // panel测试报告
+            // 
+            this.panel测试报告.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel测试报告.Controls.Add(this.label6);
+            this.panel测试报告.Location = new System.Drawing.Point(200, 0);
+            this.panel测试报告.Margin = new System.Windows.Forms.Padding(0);
+            this.panel测试报告.Name = "panel测试报告";
+            this.panel测试报告.Size = new System.Drawing.Size(100, 50);
+            this.panel测试报告.TabIndex = 5;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label6.ForeColor = System.Drawing.Color.Red;
+            this.label6.Location = new System.Drawing.Point(0, 0);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(67, 15);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "测试报告";
+            // 
+            // panelContext
+            // 
+            this.panelContext.BackColor = System.Drawing.Color.White;
+            this.panelContext.Controls.Add(this.layoutBottom);
+            this.panelContext.Controls.Add(this.panel端口扫描);
+            this.panelContext.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContext.Location = new System.Drawing.Point(0, 0);
+            this.panelContext.Margin = new System.Windows.Forms.Padding(0);
+            this.panelContext.Name = "panelContext";
+            this.panelContext.Size = new System.Drawing.Size(800, 481);
+            this.panelContext.TabIndex = 0;
+            // 
+            // layoutBottom
+            // 
+            this.layoutBottom.BackColor = System.Drawing.Color.LightGreen;
+            this.layoutBottom.Controls.Add(this.panelCoap测试);
+            this.layoutBottom.Controls.Add(this.panelMQTT测试);
+            this.layoutBottom.Controls.Add(this.panel测试报告);
+            this.layoutBottom.Controls.Add(this.panel首页);
+            this.layoutBottom.Controls.Add(this.panel连接管理);
+            this.layoutBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.layoutBottom.Location = new System.Drawing.Point(0, 396);
+            this.layoutBottom.Margin = new System.Windows.Forms.Padding(0);
+            this.layoutBottom.Name = "layoutBottom";
+            this.layoutBottom.Size = new System.Drawing.Size(800, 85);
+            this.layoutBottom.TabIndex = 1;
+            // 
             // MainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -545,8 +546,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel连接管理.ResumeLayout(false);
             this.panel连接管理.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dvCn)).EndInit();
             this.panel端口扫描.ResumeLayout(false);
             this.panel端口扫描.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dvSc)).EndInit();
             this.panelCoap测试.ResumeLayout(false);
             this.panelCoap测试.PerformLayout();
             this.panelMQTT测试.ResumeLayout(false);
@@ -555,8 +558,6 @@
             this.panel测试报告.PerformLayout();
             this.panelContext.ResumeLayout(false);
             this.layoutBottom.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.customgDataView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customgDataView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -586,13 +587,13 @@
         private Controls.MenuButtonPanel menuButtonPanel4;
         private Controls.MenuButtonPanel menuButtonPanel6;
         private System.Windows.Forms.FlowLayoutPanel layoutTop;
-        private Controls.CustomgDataView customgDataView1;
+        private Controls.CustomgDataView dvCn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameCn;
         private System.Windows.Forms.DataGridViewTextBoxColumn typeCn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ipCn;
         private System.Windows.Forms.DataGridViewTextBoxColumn timeCn;
         private System.Windows.Forms.DataGridViewTextBoxColumn doCn;
-        private Controls.CustomgDataView customgDataView2;
+        private Controls.CustomgDataView dvSc;
         private System.Windows.Forms.DataGridViewTextBoxColumn portSc;
         private System.Windows.Forms.DataGridViewTextBoxColumn typeSc;
         private System.Windows.Forms.DataGridViewTextBoxColumn stateSc;

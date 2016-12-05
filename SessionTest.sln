@@ -5,10 +5,6 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SessionTest", "SessionTest\SessionTest.csproj", "{3B0B5936-71B6-4C10-9406-4A5386BDF47B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestForm", "TestForm\TestForm.csproj", "{077DC0B0-0BA0-457B-A902-EAE4CFC52980}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication1", "ConsoleApplication1\ConsoleApplication1.csproj", "{804EEE85-0F85-4731-959D-E3C73BB3BB4A}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,14 +15,6 @@ Global
 		{3B0B5936-71B6-4C10-9406-4A5386BDF47B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B0B5936-71B6-4C10-9406-4A5386BDF47B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B0B5936-71B6-4C10-9406-4A5386BDF47B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{077DC0B0-0BA0-457B-A902-EAE4CFC52980}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{077DC0B0-0BA0-457B-A902-EAE4CFC52980}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{077DC0B0-0BA0-457B-A902-EAE4CFC52980}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{077DC0B0-0BA0-457B-A902-EAE4CFC52980}.Release|Any CPU.Build.0 = Release|Any CPU
-		{804EEE85-0F85-4731-959D-E3C73BB3BB4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{804EEE85-0F85-4731-959D-E3C73BB3BB4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{804EEE85-0F85-4731-959D-E3C73BB3BB4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{804EEE85-0F85-4731-959D-E3C73BB3BB4A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
