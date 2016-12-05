@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.layoutTop = new System.Windows.Forms.FlowLayoutPanel();
             this.panel首页 = new System.Windows.Forms.Panel();
@@ -40,12 +41,6 @@
             this.panel连接管理 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel端口扫描 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.panelCoap测试 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -67,6 +62,12 @@
             this.ipCn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.timeCn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.doCn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customgDataView2 = new SessionTest.Controls.CustomgDataView();
+            this.portSc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.typeSc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stateSc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.serverSc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.versionSc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -76,13 +77,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel连接管理.SuspendLayout();
             this.panel端口扫描.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panelCoap测试.SuspendLayout();
             this.panelMQTT测试.SuspendLayout();
             this.panel测试报告.SuspendLayout();
             this.panelContext.SuspendLayout();
             this.layoutBottom.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customgDataView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customgDataView2)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -160,11 +161,10 @@
             this.panel连接管理.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel连接管理.Controls.Add(this.customgDataView1);
             this.panel连接管理.Controls.Add(this.label3);
-            this.panel连接管理.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel连接管理.Location = new System.Drawing.Point(0, 0);
+            this.panel连接管理.Location = new System.Drawing.Point(500, 0);
             this.panel连接管理.Margin = new System.Windows.Forms.Padding(0);
             this.panel连接管理.Name = "panel连接管理";
-            this.panel连接管理.Size = new System.Drawing.Size(800, 481);
+            this.panel连接管理.Size = new System.Drawing.Size(100, 50);
             this.panel连接管理.TabIndex = 2;
             // 
             // label3
@@ -182,68 +182,13 @@
             // panel端口扫描
             // 
             this.panel端口扫描.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel端口扫描.Controls.Add(this.dataGridView1);
+            this.panel端口扫描.Controls.Add(this.customgDataView2);
             this.panel端口扫描.Controls.Add(this.label2);
             this.panel端口扫描.Location = new System.Drawing.Point(400, 0);
             this.panel端口扫描.Margin = new System.Windows.Forms.Padding(0);
             this.panel端口扫描.Name = "panel端口扫描";
             this.panel端口扫描.Size = new System.Drawing.Size(100, 50);
             this.panel端口扫描.TabIndex = 1;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
-            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("宋体", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column5,
-            this.Column2,
-            this.Column3,
-            this.Column4});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.GridColor = System.Drawing.Color.Blue;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 15);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(100, 35);
-            this.dataGridView1.TabIndex = 2;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "端口号";
-            this.Column1.Name = "Column1";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "类型";
-            this.Column5.Name = "Column5";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "状态";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "运行服务";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "服务版本";
-            this.Column4.Name = "Column4";
             // 
             // label2
             // 
@@ -328,7 +273,6 @@
             // 
             this.panelContext.BackColor = System.Drawing.Color.White;
             this.panelContext.Controls.Add(this.layoutBottom);
-            this.panelContext.Controls.Add(this.panel连接管理);
             this.panelContext.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContext.Location = new System.Drawing.Point(0, 0);
             this.panelContext.Margin = new System.Windows.Forms.Padding(0);
@@ -344,6 +288,7 @@
             this.layoutBottom.Controls.Add(this.panel测试报告);
             this.layoutBottom.Controls.Add(this.panel首页);
             this.layoutBottom.Controls.Add(this.panel端口扫描);
+            this.layoutBottom.Controls.Add(this.panel连接管理);
             this.layoutBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.layoutBottom.Location = new System.Drawing.Point(0, 396);
             this.layoutBottom.Margin = new System.Windows.Forms.Padding(0);
@@ -473,7 +418,7 @@
             this.customgDataView1.ReadOnly = true;
             this.customgDataView1.RowHeadersVisible = false;
             this.customgDataView1.RowTemplate.Height = 27;
-            this.customgDataView1.Size = new System.Drawing.Size(800, 466);
+            this.customgDataView1.Size = new System.Drawing.Size(100, 35);
             this.customgDataView1.TabIndex = 2;
             // 
             // nameCn
@@ -506,6 +451,77 @@
             this.doCn.Name = "doCn";
             this.doCn.ReadOnly = true;
             // 
+            // customgDataView2
+            // 
+            this.customgDataView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.customgDataView2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.customgDataView2.BackgroundColor = System.Drawing.Color.White;
+            this.customgDataView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.customgDataView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
+            this.customgDataView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("宋体", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.customgDataView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.customgDataView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.customgDataView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.portSc,
+            this.typeSc,
+            this.stateSc,
+            this.serverSc,
+            this.versionSc});
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("宋体", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.customgDataView2.DefaultCellStyle = dataGridViewCellStyle4;
+            this.customgDataView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.customgDataView2.GridColor = System.Drawing.Color.SkyBlue;
+            this.customgDataView2.Location = new System.Drawing.Point(0, 15);
+            this.customgDataView2.Name = "customgDataView2";
+            this.customgDataView2.ReadOnly = true;
+            this.customgDataView2.RowHeadersVisible = false;
+            this.customgDataView2.RowTemplate.Height = 27;
+            this.customgDataView2.Size = new System.Drawing.Size(100, 35);
+            this.customgDataView2.TabIndex = 3;
+            // 
+            // portSc
+            // 
+            this.portSc.HeaderText = "端口号";
+            this.portSc.Name = "portSc";
+            this.portSc.ReadOnly = true;
+            // 
+            // typeSc
+            // 
+            this.typeSc.HeaderText = "类型";
+            this.typeSc.Name = "typeSc";
+            this.typeSc.ReadOnly = true;
+            // 
+            // stateSc
+            // 
+            this.stateSc.HeaderText = "状态";
+            this.stateSc.Name = "stateSc";
+            this.stateSc.ReadOnly = true;
+            // 
+            // serverSc
+            // 
+            this.serverSc.HeaderText = "运行服务";
+            this.serverSc.Name = "serverSc";
+            this.serverSc.ReadOnly = true;
+            // 
+            // versionSc
+            // 
+            this.versionSc.HeaderText = "服务版本";
+            this.versionSc.Name = "versionSc";
+            this.versionSc.ReadOnly = true;
+            // 
             // MainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -531,7 +547,6 @@
             this.panel连接管理.PerformLayout();
             this.panel端口扫描.ResumeLayout(false);
             this.panel端口扫描.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panelCoap测试.ResumeLayout(false);
             this.panelCoap测试.PerformLayout();
             this.panelMQTT测试.ResumeLayout(false);
@@ -541,6 +556,7 @@
             this.panelContext.ResumeLayout(false);
             this.layoutBottom.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.customgDataView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customgDataView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -565,16 +581,10 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private Controls.MenuButtonPanel menuButtonPanel3;
         private Controls.MenuButtonPanel menuButtonPanel5;
         private Controls.MenuButtonPanel menuButtonPanel4;
         private Controls.MenuButtonPanel menuButtonPanel6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.FlowLayoutPanel layoutTop;
         private Controls.CustomgDataView customgDataView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameCn;
@@ -582,6 +592,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ipCn;
         private System.Windows.Forms.DataGridViewTextBoxColumn timeCn;
         private System.Windows.Forms.DataGridViewTextBoxColumn doCn;
+        private Controls.CustomgDataView customgDataView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn portSc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn typeSc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stateSc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn serverSc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn versionSc;
     }
 }
 

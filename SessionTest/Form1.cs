@@ -55,15 +55,7 @@ namespace SessionTest
             }                                     
         }
 
-        void CreateServer()
-        {
-
-        }
-
-        void ScanIpsL()
-        {
-                
-        }
+    
 
 
         private void label2_Click(object sender, EventArgs e)
@@ -189,6 +181,16 @@ namespace SessionTest
         void CircleGetIp()
         {
                 
+        }
+
+        void CreateServer()
+        {
+
+        }
+
+        void ScanIpsL()
+        {
+
         }
         #endregion
     }

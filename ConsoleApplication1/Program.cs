@@ -37,7 +37,7 @@ namespace ConsoleApplication1
             Console.ReadKey();
         }
 
-        void AddData()
+        void AddData(string x)
         { }
     }
 }
