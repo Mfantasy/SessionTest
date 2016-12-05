@@ -45,6 +45,13 @@ namespace SessionTest
             {
                 menuButtonPanel6.ShowDefaultImage(null, null);
             }
+            for (int i = 0; i < 6; i++)
+            {
+                panelContext.Controls.Add(layoutBottom.Controls[0]);
+            }
+                
+            
+            
         }
 
         void ScanIpsL()

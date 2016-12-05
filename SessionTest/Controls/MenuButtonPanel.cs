@@ -15,12 +15,12 @@ namespace SessionTest.Controls
         {
             this.BackColor = Color.Black;
             this.BackgroundImageLayout = ImageLayout.Stretch;
-            this.Dock = DockStyle.Fill;
+            //this.Dock = DockStyle.Fill;
             this.Margin = new Padding(10);
             this.CaptionLabel = new Label();
             this.CaptionLabel.AutoSize = true;
             this.CaptionLabel.BackColor = Color.Transparent;
-            this.CaptionLabel.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.CaptionLabel.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point,((byte)(134)));
             this.CaptionLabel.ForeColor = Color.White;
             this.Controls.Add(CaptionLabel);
             this.CaptionText = "Caption";
@@ -79,6 +79,14 @@ namespace SessionTest.Controls
         private void MenuButtonPanel_SizeChanged(object sender, EventArgs e)
         {
             this.CaptionLabel.Location = new Point((this.Width - CaptionLabel.Width) / 2, (this.Height - CaptionLabel.Height) - 5);
+            if (this.Width > this.Height)
+            {
+                this.Width = this.Height;
+            }
+            else
+            {
+                this.Height = this.Width;
+            }
         }
 
         [Browsable(true)]
