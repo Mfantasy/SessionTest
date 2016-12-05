@@ -45,13 +45,19 @@ namespace SessionTest
             {
                 menuButtonPanel6.ShowDefaultImage(null, null);
             }
-            for (int i = 0; i < 6; i++)
+            //load 内容panel
+            int l = layoutBottom.Controls.Count;
+            for (int i = 0; i < l; i++)
             {
-                panelContext.Controls.Add(layoutBottom.Controls[0]);
-            }
-                
-            
-            
+                Control ctrl = layoutBottom.Controls[0];
+                ctrl.Dock = DockStyle.Fill;
+                panelContext.Controls.Add(ctrl);
+            }                                     
+        }
+
+        void CreateServer()
+        {
+
         }
 
         void ScanIpsL()
@@ -59,12 +65,6 @@ namespace SessionTest
                 
         }
 
-
-
-        private void menuButtonPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void label2_Click(object sender, EventArgs e)
         {

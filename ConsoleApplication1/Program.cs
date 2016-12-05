@@ -36,5 +36,8 @@ namespace ConsoleApplication1
             Console.WriteLine("{0}\r\n{1}\r\n{2}\r\n{3}\r\n{4}",y1,y2,y3,y4,y5);
             Console.ReadKey();
         }
+
+        void AddData()
+        { }
     }
 }
