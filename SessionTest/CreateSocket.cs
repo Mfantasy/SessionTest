@@ -25,9 +25,9 @@ namespace SessionTest
             {
                 Socket socket = server.Accept();
                 //获取
-                var x = socket.RemoteEndPoint as IPEndPoint;
+                //var x = socket.RemoteEndPoint as IPEndPoint;
 #if DEBUG
-                socket.Send(Encoding.Default.GetBytes("Server:发送数据测试。"));
+               // socket.Send(Encoding.Default.GetBytes("Server:发送数据测试。"));
 #endif
                 ThreadPool.QueueUserWorkItem(ServerReceive, socket);
             }
@@ -48,7 +48,7 @@ namespace SessionTest
                 catch (Exception ex)
                 {
 #if DEBUG
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show(ex.Message+"\r\n"+ex.StackTrace);
 #endif
                     break;
                 }
@@ -74,9 +74,9 @@ namespace SessionTest
             //Console.WriteLine(xx);
             //Console.WriteLine("客户端接收数据成功!");
             //Console.WriteLine("发送测试:");
-            client.Send(Encoding.Default.GetBytes("客户端发送数据成功!"));
-            Thread.Sleep(1000);
+            client.Send(Encoding.Default.GetBytes("发送数据测试OK!"));            
             client.Shutdown(SocketShutdown.Both);
+            Thread.Sleep(100);
             client.Close();
         }
     }

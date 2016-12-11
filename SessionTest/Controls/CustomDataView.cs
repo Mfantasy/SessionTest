@@ -8,11 +8,11 @@ using System.Windows.Forms;
 
 namespace SessionTest.Controls
 {
-    public class CustomgDataView : DataGridView
+    public class CustomDataView : DataGridView
     {
-        public CustomgDataView()
+        public CustomDataView()
         {
-            this.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            //this.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.BorderStyle = BorderStyle.Fixed3D;
             this.CellBorderStyle = DataGridViewCellBorderStyle.Sunken;
             this.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Sunken;
@@ -23,8 +23,10 @@ namespace SessionTest.Controls
             this.RowHeadersVisible = false;
             this.ReadOnly = true;
             this.Dock = DockStyle.Fill;
-            this.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            this.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            this.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells;
         }
+
+    
     }
 }
