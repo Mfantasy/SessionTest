@@ -46,7 +46,7 @@ namespace SessionTest
             if (menuButtonPanel6.DefaultImage != null)
             {
                 menuButtonPanel6.ShowDefaultImage(null, null);
-            }
+            }            
             //load 内容panel
             int l = layoutBottom.Controls.Count;
             for (int i = 0; i < l; i++)
@@ -55,7 +55,7 @@ namespace SessionTest
                 ctrl.Dock = DockStyle.Fill;
                 panelContext.Controls.Add(ctrl);
             }
-            ThreadPool.QueueUserWorkItem(ScanIpsL);
+           // ThreadPool.QueueUserWorkItem(ScanIpsL);
         }
 
 
@@ -92,7 +92,7 @@ namespace SessionTest
         {
             BackgroundWorker bw = new BackgroundWorker();
             bw.DoWork += Bw_DoWork;
-            bw.RunWorkerAsync(ConfigurationManager.AppSettings["scanIp"]);
+            bw.RunWorkerAsync(CustomConfig.scanIp);
             var wait = new ScanWaittingForm(bw);
             wait.ShowDialog();
             return;
@@ -129,22 +129,7 @@ namespace SessionTest
                 return false;
             }
         }
-        class CncRowModel
-        {
-            public CncRowModel(string name, string typ, string adr, string time, DataGridViewRow row)
-            {
-                this.Name = name;
-                this.Typ = typ;
-                this.Adr = adr;
-                this.Time = time;
-                this.Row = row;
-            }
-            public string Name { get; set; }
-            public string Typ { get; set; }
-            public string Adr { get; set; }
-            public string Time { get; set; }
-            public DataGridViewRow Row { get; set; }
-        }
+      
         string itName = ConfigurationManager.AppSettings["itName"];//iot gprs
         string iotName = ConfigurationManager.AppSettings["iotName"];
         string gprsName = ConfigurationManager.AppSettings["gprsName"];
@@ -226,6 +211,8 @@ namespace SessionTest
             else if (mode == 1)
             {
                 Regex rNum = new Regex("^\\d{1,5}/");
+                dvSc.Invoke(new Action(() => dvSc.Rows.Clear()));
+                
                 string nameSc = "";
                 string macAddrSc = "";
                 string deviceSc = "";
@@ -237,6 +224,11 @@ namespace SessionTest
                     if (line.StartsWith("Nmap scan report for "))
                     {
                         nameSc = line.Replace("Nmap scan report for ", "").Trim();
+                    }
+                    else if(line.Contains("Host seems down."))
+                    {
+                        MessageBox.Show("请检查扫描地址!");
+                        return;
                     }
                     else if (rNum.IsMatch(line))
                     {
@@ -309,7 +301,11 @@ namespace SessionTest
 
         private void button2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("设置");
+            ConfigForm cgfm = new ConfigForm(addrsOld);
+            cgfm.MdiParent = this;
+            cgfm.Show();
+            cgfm.BringToFront();
+            
         }
     }
 }

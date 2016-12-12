@@ -56,6 +56,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppContextRecord.cs" />
+    <Compile Include="CncRowModel.cs" />
+    <Compile Include="ConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigForm.Designer.cs">
+      <DependentUpon>ConfigForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\CustomDataView.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -63,6 +70,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="CreateSocket.cs" />
+    <Compile Include="CustomConfig.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +85,9 @@
     <Compile Include="ScanWaittingForm.Designer.cs">
       <DependentUpon>ScanWaittingForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ConfigForm.resx">
+      <DependentUpon>ConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
