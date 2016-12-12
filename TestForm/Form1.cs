@@ -1,4 +1,5 @@
-﻿using SessionTest.Controls;
+﻿using SessionTest;
+using SessionTest.Controls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -35,16 +36,44 @@ namespace TestForm
                 MyAngle += 0.5f;
             }
         }
+        ConfigForm fm;
         private void button1_Click(object sender, EventArgs e)
         {
-            XuanZhuan(pictureBox1);
-            //IPAddress ipadd;
-            ////string str = line.Replace("Nmap scan report for ", "").Trim();
-            //string str = "localhost(192.168.10.101)";
-            //if (!IPAddress.TryParse(str, out ipadd))
-            //{
-            //    MessageBox.Show("");
-            //}
+            if (fm != null)
+            {
+                fm.Show();
+            }
+            else
+            {
+                fm = new ConfigForm();
+                fm.ShowDialog();
+            }
+        }
+        List<CncRowModel> list;
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
+            Thread th = new Thread(Test);
+            th.Start();
+            while (true)
+            {
+                for (int i = 0; i < lst.Count; i++)
+                {
+                    Console.WriteLine(lst[i]);
+                }
+            }
+        }
+
+        List<int> lst = new List<int> { 123,1,2,2,2,3};
+        void Test()
+        {
+            lock (lst)
+            {
+                for (int i = 0; i < 9999999; i++)
+                {
+                    lst.Add(i);
+                }
+            }
         }
     }
 }

@@ -55,7 +55,7 @@ namespace SessionTest
                 ctrl.Dock = DockStyle.Fill;
                 panelContext.Controls.Add(ctrl);
             }
-           // ThreadPool.QueueUserWorkItem(ScanIpsL);
+            ThreadPool.QueueUserWorkItem(ScanIpsL);
         }
 
 
@@ -92,7 +92,7 @@ namespace SessionTest
         {
             BackgroundWorker bw = new BackgroundWorker();
             bw.DoWork += Bw_DoWork;
-            bw.RunWorkerAsync(CustomConfig.scanIp);
+            bw.RunWorkerAsync(CustomConfig.currentIp);
             var wait = new ScanWaittingForm(bw);
             wait.ShowDialog();
             return;
@@ -133,7 +133,7 @@ namespace SessionTest
         string itName = ConfigurationManager.AppSettings["itName"];//iot gprs
         string iotName = ConfigurationManager.AppSettings["iotName"];
         string gprsName = ConfigurationManager.AppSettings["gprsName"];
-        List<CncRowModel> addrsOld = new List<CncRowModel>();
+        public static List<CncRowModel> addrsOld = new List<CncRowModel>();
         bool isFirstCnc = true;
         private void ParseLine(StreamReader reader, int mode)
         {
@@ -298,14 +298,18 @@ namespace SessionTest
         {
             this.Close();
         }
-
+        ConfigForm cgfm;
         private void button2_Click(object sender, EventArgs e)
         {
-            ConfigForm cgfm = new ConfigForm(addrsOld);
-            cgfm.MdiParent = this;
-            cgfm.Show();
-            cgfm.BringToFront();
-            
+            if (cgfm != null)
+            {
+                cgfm.Show();
+            }
+            else
+            {
+                cgfm = new ConfigForm();
+                cgfm.ShowDialog();
+            }
         }
     }
 }
