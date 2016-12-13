@@ -53,9 +53,10 @@ namespace SessionTest
             {
                 Control ctrl = layoutBottom.Controls[0];
                 ctrl.Dock = DockStyle.Fill;
-                panelContext.Controls.Add(ctrl);
+                panelContext.Controls.Add(ctrl);             
             }
-            ThreadPool.QueueUserWorkItem(ScanIpsL);
+            panel首页.BringToFront();                        
+            //ThreadPool.QueueUserWorkItem(ScanIpsL);
         }
 
 
@@ -88,16 +89,6 @@ namespace SessionTest
                 dvSc.Invoke(new Action(() => dvSc.Rows.Add(y1, y2, y3, y4, y5)));
             }
         }
-        private void label2_Click(object sender, EventArgs e)
-        {
-            BackgroundWorker bw = new BackgroundWorker();
-            bw.DoWork += Bw_DoWork;
-            bw.RunWorkerAsync(CustomConfig.currentIp);
-            var wait = new ScanWaittingForm(bw);
-            wait.ShowDialog();
-            return;
-        }
-
 
         private void Bw_DoWork(object sender, DoWorkEventArgs e)
         {
@@ -310,6 +301,16 @@ namespace SessionTest
                 cgfm = new ConfigForm();
                 cgfm.ShowDialog();
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            BackgroundWorker bw = new BackgroundWorker();
+            bw.DoWork += Bw_DoWork;
+            bw.RunWorkerAsync(CustomConfig.currentIp);
+            var wait = new ScanWaittingForm(bw);
+            wait.ShowDialog();
+            return;
         }
     }
 }

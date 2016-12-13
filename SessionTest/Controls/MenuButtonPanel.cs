@@ -12,8 +12,7 @@ namespace SessionTest.Controls
     public class MenuButtonPanel:Panel
     {
         public MenuButtonPanel()
-        {
-            this.BackColor = Color.Black;
+        {        
             this.BackgroundImageLayout = ImageLayout.Stretch;
             //this.Dock = DockStyle.Fill;
             this.Margin = new Padding(10);
@@ -32,6 +31,10 @@ namespace SessionTest.Controls
             CaptionLabel.MouseEnter += MenuButtonPanel_MouseEnter;
             CaptionLabel.MouseLeave += MenuButtonPanel_MouseLeave;
             this.DoubleBuffered = true;
+            if (this.Parent != null)
+            {
+                this.BackColor = this.Parent.BackColor;
+            }
         }
 
         private void MenuButtonPanel_MouseLeave(object sender, EventArgs e)

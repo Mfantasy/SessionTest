@@ -34,20 +34,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.layoutTop = new System.Windows.Forms.FlowLayoutPanel();
             this.panel首页 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel连接管理 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel端口扫描 = new System.Windows.Forms.Panel();
             this.labelMacAdd = new System.Windows.Forms.Label();
             this.labelDeviceType = new System.Windows.Forms.Label();
             this.labelName = new System.Windows.Forms.Label();
-            this.labelSystem = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.panelCoap测试 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.panelMQTT测试 = new System.Windows.Forms.Panel();
@@ -56,6 +49,12 @@
             this.label6 = new System.Windows.Forms.Label();
             this.panelContext = new System.Windows.Forms.Panel();
             this.layoutBottom = new System.Windows.Forms.FlowLayoutPanel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.labelSystem = new System.Windows.Forms.Label();
             this.menuButtonPanel1 = new SessionTest.Controls.MenuButtonPanel();
             this.menuButtonPanel3 = new SessionTest.Controls.MenuButtonPanel();
             this.menuButtonPanel5 = new SessionTest.Controls.MenuButtonPanel();
@@ -79,7 +78,6 @@
             this.splitContainer1.SuspendLayout();
             this.layoutTop.SuspendLayout();
             this.panel首页.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel连接管理.SuspendLayout();
             this.panel端口扫描.SuspendLayout();
             this.panelCoap测试.SuspendLayout();
@@ -87,6 +85,8 @@
             this.panel测试报告.SuspendLayout();
             this.panelContext.SuspendLayout();
             this.layoutBottom.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dvCn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dvSc)).BeginInit();
             this.SuspendLayout();
@@ -114,41 +114,6 @@
             this.splitContainer1.SplitterWidth = 1;
             this.splitContainer1.TabIndex = 0;
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(763, 6);
-            this.button1.Margin = new System.Windows.Forms.Padding(1);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(30, 30);
-            this.button1.TabIndex = 7;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(728, 6);
-            this.button2.Margin = new System.Windows.Forms.Padding(1);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(30, 30);
-            this.button2.TabIndex = 6;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // layoutTop
             // 
             this.layoutTop.Controls.Add(this.menuButtonPanel1);
@@ -166,71 +131,34 @@
             // panel首页
             // 
             this.panel首页.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel首页.Controls.Add(this.label1);
+            this.panel首页.Controls.Add(this.pictureBox2);
             this.panel首页.Controls.Add(this.pictureBox1);
-            this.panel首页.Location = new System.Drawing.Point(300, 0);
+            this.panel首页.Location = new System.Drawing.Point(500, 0);
             this.panel首页.Margin = new System.Windows.Forms.Padding(0);
             this.panel首页.Name = "panel首页";
             this.panel首页.Size = new System.Drawing.Size(100, 50);
             this.panel首页.TabIndex = 0;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 12);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "首页";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-126, -437);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(192, 42);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // panel连接管理
             // 
             this.panel连接管理.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel连接管理.Controls.Add(this.dvCn);
-            this.panel连接管理.Controls.Add(this.label3);
-            this.panel连接管理.Location = new System.Drawing.Point(400, 0);
+            this.panel连接管理.Location = new System.Drawing.Point(300, 0);
             this.panel连接管理.Margin = new System.Windows.Forms.Padding(0);
             this.panel连接管理.Name = "panel连接管理";
             this.panel连接管理.Size = new System.Drawing.Size(100, 50);
             this.panel连接管理.TabIndex = 2;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(0, 0);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 12);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "连接管理";
-            // 
             // panel端口扫描
             // 
             this.panel端口扫描.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel端口扫描.Controls.Add(this.button3);
             this.panel端口扫描.Controls.Add(this.labelMacAdd);
             this.panel端口扫描.Controls.Add(this.labelDeviceType);
             this.panel端口扫描.Controls.Add(this.labelName);
             this.panel端口扫描.Controls.Add(this.labelSystem);
             this.panel端口扫描.Controls.Add(this.dvSc);
-            this.panel端口扫描.Controls.Add(this.label2);
-            this.panel端口扫描.Location = new System.Drawing.Point(500, 0);
+            this.panel端口扫描.Location = new System.Drawing.Point(400, 0);
             this.panel端口扫描.Margin = new System.Windows.Forms.Padding(0);
             this.panel端口扫描.Name = "panel端口扫描";
             this.panel端口扫描.Size = new System.Drawing.Size(100, 50);
@@ -277,34 +205,6 @@
             this.labelName.Padding = new System.Windows.Forms.Padding(20, 10, 10, 10);
             this.labelName.Size = new System.Drawing.Size(30, 41);
             this.labelName.TabIndex = 7;
-            // 
-            // labelSystem
-            // 
-            this.labelSystem.AutoSize = true;
-            this.labelSystem.BackColor = System.Drawing.Color.Transparent;
-            this.labelSystem.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.labelSystem.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelSystem.Image = ((System.Drawing.Image)(resources.GetObject("labelSystem.Image")));
-            this.labelSystem.Location = new System.Drawing.Point(0, 9);
-            this.labelSystem.Margin = new System.Windows.Forms.Padding(20, 30, 10, 10);
-            this.labelSystem.MaximumSize = new System.Drawing.Size(720, 41);
-            this.labelSystem.Name = "labelSystem";
-            this.labelSystem.Padding = new System.Windows.Forms.Padding(20, 10, 10, 10);
-            this.labelSystem.Size = new System.Drawing.Size(30, 41);
-            this.labelSystem.TabIndex = 4;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(0, 0);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 12);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "端口扫描";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // panelCoap测试
             // 
@@ -389,9 +289,9 @@
             this.layoutBottom.Controls.Add(this.panelCoap测试);
             this.layoutBottom.Controls.Add(this.panelMQTT测试);
             this.layoutBottom.Controls.Add(this.panel测试报告);
-            this.layoutBottom.Controls.Add(this.panel首页);
             this.layoutBottom.Controls.Add(this.panel连接管理);
             this.layoutBottom.Controls.Add(this.panel端口扫描);
+            this.layoutBottom.Controls.Add(this.panel首页);
             this.layoutBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.layoutBottom.Location = new System.Drawing.Point(0, 420);
             this.layoutBottom.Margin = new System.Windows.Forms.Padding(0);
@@ -399,9 +299,100 @@
             this.layoutBottom.Size = new System.Drawing.Size(800, 61);
             this.layoutBottom.TabIndex = 1;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(763, 6);
+            this.button1.Margin = new System.Windows.Forms.Padding(1);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(30, 30);
+            this.button1.TabIndex = 7;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(728, 6);
+            this.button2.Margin = new System.Windows.Forms.Padding(1);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(30, 30);
+            this.button2.TabIndex = 6;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 117);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(-296, -79);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(385, 117);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button3
+            // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button3.BackColor = System.Drawing.Color.White;
+            this.button3.BackgroundImage = global::SessionTest.Properties.Resources.btn;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ForeColor = System.Drawing.Color.Transparent;
+            this.button3.Location = new System.Drawing.Point(23, -28);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(64, 64);
+            this.button3.TabIndex = 8;
+            this.button3.Text = "start";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // labelSystem
+            // 
+            this.labelSystem.AutoSize = true;
+            this.labelSystem.BackColor = System.Drawing.Color.Transparent;
+            this.labelSystem.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.labelSystem.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelSystem.Image = ((System.Drawing.Image)(resources.GetObject("labelSystem.Image")));
+            this.labelSystem.Location = new System.Drawing.Point(0, 9);
+            this.labelSystem.Margin = new System.Windows.Forms.Padding(20, 30, 10, 10);
+            this.labelSystem.MaximumSize = new System.Drawing.Size(720, 41);
+            this.labelSystem.Name = "labelSystem";
+            this.labelSystem.Padding = new System.Windows.Forms.Padding(20, 10, 10, 10);
+            this.labelSystem.Size = new System.Drawing.Size(30, 41);
+            this.labelSystem.TabIndex = 4;
+            // 
             // menuButtonPanel1
             // 
-            this.menuButtonPanel1.BackColor = System.Drawing.Color.Black;
+            this.menuButtonPanel1.BackColor = System.Drawing.Color.Lime;
             this.menuButtonPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.menuButtonPanel1.CaptionText = "首页";
             this.menuButtonPanel1.CheckedImage = ((System.Drawing.Image)(resources.GetObject("menuButtonPanel1.CheckedImage")));
@@ -415,7 +406,7 @@
             // 
             // menuButtonPanel3
             // 
-            this.menuButtonPanel3.BackColor = System.Drawing.Color.Black;
+            this.menuButtonPanel3.BackColor = System.Drawing.Color.Lime;
             this.menuButtonPanel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.menuButtonPanel3.CaptionText = "连接管理";
             this.menuButtonPanel3.CheckedImage = ((System.Drawing.Image)(resources.GetObject("menuButtonPanel3.CheckedImage")));
@@ -429,7 +420,7 @@
             // 
             // menuButtonPanel5
             // 
-            this.menuButtonPanel5.BackColor = System.Drawing.Color.Black;
+            this.menuButtonPanel5.BackColor = System.Drawing.Color.Lime;
             this.menuButtonPanel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.menuButtonPanel5.CaptionText = "端口扫描";
             this.menuButtonPanel5.CheckedImage = ((System.Drawing.Image)(resources.GetObject("menuButtonPanel5.CheckedImage")));
@@ -443,7 +434,7 @@
             // 
             // menuButtonPanel4
             // 
-            this.menuButtonPanel4.BackColor = System.Drawing.Color.Black;
+            this.menuButtonPanel4.BackColor = System.Drawing.Color.Lime;
             this.menuButtonPanel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.menuButtonPanel4.CaptionText = "Coap测试";
             this.menuButtonPanel4.CheckedImage = ((System.Drawing.Image)(resources.GetObject("menuButtonPanel4.CheckedImage")));
@@ -457,7 +448,7 @@
             // 
             // menuButtonPanel2
             // 
-            this.menuButtonPanel2.BackColor = System.Drawing.Color.Black;
+            this.menuButtonPanel2.BackColor = System.Drawing.Color.Lime;
             this.menuButtonPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.menuButtonPanel2.CaptionText = "MQTT测试";
             this.menuButtonPanel2.CheckedImage = ((System.Drawing.Image)(resources.GetObject("menuButtonPanel2.CheckedImage")));
@@ -471,7 +462,7 @@
             // 
             // menuButtonPanel6
             // 
-            this.menuButtonPanel6.BackColor = System.Drawing.Color.Black;
+            this.menuButtonPanel6.BackColor = System.Drawing.Color.Lime;
             this.menuButtonPanel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.menuButtonPanel6.CaptionText = "分析报告";
             this.menuButtonPanel6.CheckedImage = ((System.Drawing.Image)(resources.GetObject("menuButtonPanel6.CheckedImage")));
@@ -517,12 +508,12 @@
             this.dvCn.DefaultCellStyle = dataGridViewCellStyle2;
             this.dvCn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dvCn.GridColor = System.Drawing.Color.SkyBlue;
-            this.dvCn.Location = new System.Drawing.Point(0, 12);
+            this.dvCn.Location = new System.Drawing.Point(0, 0);
             this.dvCn.Name = "dvCn";
             this.dvCn.ReadOnly = true;
             this.dvCn.RowHeadersVisible = false;
             this.dvCn.RowTemplate.Height = 27;
-            this.dvCn.Size = new System.Drawing.Size(100, 38);
+            this.dvCn.Size = new System.Drawing.Size(100, 50);
             this.dvCn.TabIndex = 2;
             // 
             // nameCn
@@ -586,13 +577,13 @@
             this.dvSc.DefaultCellStyle = dataGridViewCellStyle4;
             this.dvSc.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dvSc.GridColor = System.Drawing.Color.SkyBlue;
-            this.dvSc.Location = new System.Drawing.Point(0, 12);
+            this.dvSc.Location = new System.Drawing.Point(0, 0);
             this.dvSc.Margin = new System.Windows.Forms.Padding(0);
             this.dvSc.Name = "dvSc";
             this.dvSc.ReadOnly = true;
             this.dvSc.RowHeadersVisible = false;
             this.dvSc.RowTemplate.Height = 27;
-            this.dvSc.Size = new System.Drawing.Size(100, 38);
+            this.dvSc.Size = new System.Drawing.Size(100, 50);
             this.dvSc.TabIndex = 3;
             // 
             // portSc
@@ -650,10 +641,7 @@
             this.splitContainer1.ResumeLayout(false);
             this.layoutTop.ResumeLayout(false);
             this.panel首页.ResumeLayout(false);
-            this.panel首页.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel连接管理.ResumeLayout(false);
-            this.panel连接管理.PerformLayout();
             this.panel端口扫描.ResumeLayout(false);
             this.panel端口扫描.PerformLayout();
             this.panelCoap测试.ResumeLayout(false);
@@ -664,6 +652,8 @@
             this.panel测试报告.PerformLayout();
             this.panelContext.ResumeLayout(false);
             this.layoutBottom.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dvCn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dvSc)).EndInit();
             this.ResumeLayout(false);
@@ -677,7 +667,6 @@
         private Controls.MenuButtonPanel menuButtonPanel1;
         private Controls.MenuButtonPanel menuButtonPanel2;
         private System.Windows.Forms.Panel panel首页;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.FlowLayoutPanel layoutBottom;
         private System.Windows.Forms.Panel panel端口扫描;
@@ -685,8 +674,6 @@
         private System.Windows.Forms.Panel panelCoap测试;
         private System.Windows.Forms.Panel panelMQTT测试;
         private System.Windows.Forms.Panel panel测试报告;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
@@ -712,6 +699,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn timeCn;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button button3;
     }
 }
 

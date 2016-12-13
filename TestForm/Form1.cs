@@ -39,16 +39,22 @@ namespace TestForm
         ConfigForm fm;
         private void button1_Click(object sender, EventArgs e)
         {
-            if (fm != null)
+            for (int i = 0; i < 88; i++)
             {
-                fm.Show();
-            }
-            else
-            {
-                fm = new ConfigForm();
-                fm.ShowDialog();
-            }
+                int j = i;
+                Thread th = new Thread(()=>Test(j));
+                th.Start();
+            }                        
         }
+
+        void Test(int i)
+        {
+            Console.WriteLine(i);
+            Thread.Sleep(50);
+        }
+
+
+
         List<CncRowModel> list;
         private void button2_Click(object sender, EventArgs e)
         {
