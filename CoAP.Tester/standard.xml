@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <testCase name="TD_COAP_CORE_2_1">
+    <group>IETF Plugtest</group>
+    <identifier>TD_COAP_CORE_2_1</identifier>
+    <objective>Perform GET transaction (CON mode)(expected response)</objective>
+    <configuration>CoAP_CFG_01</configuration>
+    <pre-testconditions>- Server offers the resource /test that handle2 GET with an arbitrary payload</pre-testconditions>
+    <testSequence>Step 1.Send a GET request with:
+    - Type = 0 (CON)
+    - Code = 1 (GET)
+Step 2.Check server's response containing:
+    - Code = 69 (2.05 Content)
+    - The same Message ID as that of the previous request
+    - Content type option</testSequence>
+    <testCaseItem>
+      <testCaseRequest>
+        <method>GET</method>
+        <messageType>CON</messageType>
+        <payLoad>
+        </payLoad>
+        <token>
+        </token>
+        <optionType>
+          <uriPath>/test</uriPath>
+        </optionType>
+      </testCaseRequest>
+      <testCaseResponse>
+        <code>69</code>
+        <messageType>ACK</messageType>
+        <sameMID>TRUE</sameMID>
+        <optionType>
+          <content-Format>
+          </content-Format>
+        </optionType>
+      </testCaseResponse>
+    </testCaseItem>
+  </testCase>
+  <testCase name="TD_COAP_CORE_2_3">
+    <group>IETF Plugtest</group>
+    <identifier>TD_COAP_CORE_2_3</identifier>
+    <objective>Perform POST transaction (CON mode) (expected response)</objective>
+    <configuration>CoAP_CFG_01</configuration>
+    <pre-testconditions>- Server accepts creation of new resource on /test (resource does not exists yet)</pre-testconditions>
+    <testSequence>Step 1. Send a POST request with:
+    - Type = 0 (CON)
+    - Code = 2 (POST)
+    - An arbitrary payload
+    - Content type option
+Step 2. Check server's response containing:
+    - Code = 65 (2.01 Created)
+    - The same Message ID as that of the previous request</testSequence>
+    <testCaseItem>
+      <testCaseRequest>
+        <method>POST</method>
+        <messageType>CON</messageType>
+        <payLoad>TD_COAP_CORE_2_3</payLoad>
+        <token>
+        </token>
+        <optionType>
+          <uriPath>/test</uriPath>
+          <content-Format>0</content-Format>
+        </optionType>
+      </testCaseRequest>
+      <testCaseResponse>
+        <code>65</code>
+        <messageType>ACK</messageType>
+        <sameMID>TRUE</sameMID>
+        <optionType />
+      </testCaseResponse>
+    </testCaseItem>
+  </testCase>
+  <testCase name="TD_COAP_CORE_2_5">
+    <group>IETF Plugtest</group>
+    <identifier>TD_COAP_CORE_2_5</identifier>
+    <objective>Perform PUT transaction (CON mode) (expected response)</objective>
+    <configuration>CoAP_CFG_01</configuration>
+    <pre-testconditions>- Server offers a resource /test that handles PUT</pre-testconditions>
+    <testSequence>Step 1. Send a PUT request with:
+    - Type = 0 (CON)
+    - Code = 3 (PUT)
+    - An arbitrary payload
+    - Content type option
+Step 2. Check server's response  containing:
+    - Code = 68 (2.04 Changed)
+    - The same Message ID as that of the previous request</testSequence>
+    <testCaseItem>
+      <testCaseRequest>
+        <method>PUT</method>
+        <messageType>CON</messageType>
+        <payLoad>TD_COAP_CORE_2_5</payLoad>
+        <token>
+        </token>
+        <optionType>
+          <uriPath>/test</uriPath>
+          <content-Format>0</content-Format>
+        </optionType>
+      </testCaseRequest>
+      <testCaseResponse>
+        <code>68</code>
+        <messageType>ACK</messageType>
+        <sameMID>TRUE</sameMID>
+        <optionType />
+      </testCaseResponse>
+    </testCaseItem>
+  </testCase>
+  <testCase name="TD_COAP_CORE_2_7">
+    <group>IETF Plugtest</group>
+    <identifier>TD_COAP_CORE_2_7</identifier>
+    <objective>Perform DELETE transaction (CON mode) (expected response)</objective>
+    <configuration>CoAP_CFG_01</configuration>
+    <pre-testconditions>- Server offers a resource /test that handles DELETE</pre-testconditions>
+    <testSequence>Step 1. Send a DELETE request with:
+    - Type = 0 (CON)
+    - Code = 4 (DELETE)
+Step 2. Check server's response containing:
+    - Code = 66 (2.02 Deleted)
+    - The same Message ID as that of the previous request</testSequence>
+    <testCaseItem>
+      <testCaseRequest>
+        <method>DELETE</method>
+        <messageType>CON</messageType>
+        <payLoad>
+        </payLoad>
+        <token>
+        </token>
+        <optionType>
+          <uriPath>/test</uriPath>
+        </optionType>
+      </testCaseRequest>
+      <testCaseResponse>
+        <code>66</code>
+        <messageType>ACK</messageType>
+        <sameMID>TRUE</sameMID>
+        <optionType />
+      </testCaseResponse>
+    </testCaseItem>
+  </testCase>
+  <testCase name="TD_COAP_CORE_2_9">
+    <group>IETF Plugtest</group>
+    <identifier>TD_COAP_CORE_2_9</identifier>
+    <objective>Perform GET transaction (NON mode) (expected response)</objective>
+    <configuration>CoAP_CFG_01</configuration>
+    <pre-testconditions>- Server offers the resource /test that handles GET</pre-testconditions>
+    <testSequence>Step 1. Send a GET request with:
+    - Type = 1 (NON)
+    - Code = 1 (GET)
+Step 2. Check server's response containing:
+    - Type = 1 (NON)
+    - Code = 69 (2.05 Content)
+    - Content type option
+</testSequence>
+    <testCaseItem>
+      <testCaseRequest>
+        <method>GET</method>
+        <messageType>NON</messageType>
+        <payLoad>
+        </payLoad>
+        <token>
+        </token>
+        <optionType>
+          <uriPath>/test</uriPath>
+        </optionType>
+      </testCaseRequest>
+      <testCaseResponse>
+        <code>69</code>
+        <messageType>NON</messageType>
+        <optionType>
+          <content-Format>
+          </content-Format>
+        </optionType>
+      </testCaseResponse>
+    </testCaseItem>
+  </testCase>
+  <testCase name="TD_COAP_CORE_2_11">
+    <group>IETF Plugtest</group>
+    <identifier>TD_COAP_CORE_2_11</identifier>
+    <objective>Perform POST transaction (NON mode) (expected response)</objective>
+    <configuration>CoAP_CFG_01</configuration>
+    <pre-testconditions>- Server accepts creation of new resource on /test (resource does not exists yet)</pre-testconditions>
+    <testSequence>Step 1. Send a POST request with:
+    - Type = 1 (NON)
+    - Code = 2 (POST)
+    - An arbitrary payload
+    - Content type option
+Step 2. Check server's response containing:
+    - Type = 1 (NON)
+    - Code = 65 (2.01 Created)</testSequence>
+    <testCaseItem>
+      <testCaseRequest>
+        <method>POST</method>
+        <messageType>NON</messageType>
+        <payLoad>TD_COAP_CORE_2_11</payLoad>
+        <token>
+        </token>
+        <optionType>
+          <uriPath>/test</uriPath>
+          <content-Format>0</content-Format>
+        </optionType>
+      </testCaseRequest>
+      <testCaseResponse>
+        <code>65</code>
+        <messageType>NON</messageType>
+        <optionType />
+      </testCaseResponse>
+    </testCaseItem>
+  </testCase>
+  <testCase name="TD_COAP_CORE_2_13">
+    <group>IETF Plugtest</group>
+    <identifier>TD_COAP_CORE_2_13</identifier>
+    <objective>Perform PUT transaction (NON mode) (expected response)</objective>
+    <configuration>CoAP_CFG_01</configuration>
+    <pre-testconditions>- Server offers a resource /test that handles PUT</pre-testconditions>
+    <testSequence>Step 1. Send a PUT request with:
+    - Type = 1 (NON)
+    - Code = 3 (PUT)
+    - An arbitrary payload
+    - Content type option
+Step 2. Check server's response containing:
+    - Type = 1 (NON)
+    - Code = 68 (2.04 Changed)</testSequence>
+    <testCaseItem>
+      <testCaseRequest>
+        <method>PUT</method>
+        <messageType>NON</messageType>
+        <payLoad>TD_COAP_CORE_2_13</payLoad>
+        <token>
+        </token>
+        <optionType>
+          <uriPath>/test</uriPath>
+          <content-Format>0</content-Format>
+        </optionType>
+      </testCaseRequest>
+      <testCaseResponse>
+        <code>68</code>
+        <messageType>NON</messageType>
+        <optionType />
+      </testCaseResponse>
+    </testCaseItem>
+  </testCase>
+  <testCase name="TD_COAP_CORE_2_15">
+    <group>IETF Plugtest</group>
+    <identifier>TD_COAP_CORE_2_15</identifier>
+    <objective>Perform DELETE transaction (NON mode) (expected response)</objective>
+    <configuration>CoAP_CFG_01</configuration>
+    <pre-testconditions>- Server offers a resource /test that handles DELETE</pre-testconditions>
+    <testSequence>Step 1. Send a DELETE request with:
+    - Type = 1 (NON)
+    - Code = 4 (DELETE)
+Step 2. Check server's response containing:
+    - Type = 1 (NON)
+    - Code = 66 (2.02 Deleted)</testSequence>
+    <testCaseItem>
+      <testCaseRequest>
+        <method>DELETE</method>
+        <messageType>NON</messageType>
+        <payLoad>
+        </payLoad>
+        <token>
+        </token>
+        <optionType>
+          <uriPath>/test</uriPath>
+        </optionType>
+      </testCaseRequest>
+      <testCaseResponse>
+        <code>66</code>
+        <messageType>NON</messageType>
+        <optionType />
+      </testCaseResponse>
+    </testCaseItem>
+  </testCase>
+</root>

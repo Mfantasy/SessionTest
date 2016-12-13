@@ -1,0 +1,533 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>test case result</title>
+  </head>
+  <body>
+    <table border="1" style="border-collapse:collapse" align="center" cellpadding="4" cellspacing="0" bordercolor="#000000">
+      <tr>
+        <td>New Test0</td>
+        <td colspan="2">Name</td>
+        <td>Expected</td>
+        <td>Received</td>
+        <td>ErrorInfo</td>
+      </tr>
+      <tr>
+        <td rowspan="number($stepCount)">步骤</td>
+        <td colspan="2">CON Request GET</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td rowspan="number($stepCount)">步骤</td>
+        <td colspan="2">ACK Response Code=69</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>步骤</td>
+        <td>错误项</td>
+        <td>type</td>
+        <td>NON</td>
+        <td>ACK</td>
+        <td>Expected type NON, but got ACK</td>
+      </tr>
+      <tr>
+        <td>步骤</td>
+        <td>错误项</td>
+        <td>code</td>
+        <td>0</td>
+        <td>69</td>
+        <td>Expected code 0, but got 69</td>
+      </tr>
+      <tr>
+        <td>New Test1</td>
+        <td colspan="2">Name</td>
+        <td>Expected</td>
+        <td>Received</td>
+        <td>ErrorInfo</td>
+      </tr>
+      <tr>
+        <td rowspan="number($stepCount)">步骤</td>
+        <td colspan="2">CON Request GET</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td rowspan="number($stepCount)">步骤</td>
+        <td colspan="2">ACK Response Code=69</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>New Test2</td>
+        <td colspan="2">Name</td>
+        <td>Expected</td>
+        <td>Received</td>
+        <td>ErrorInfo</td>
+      </tr>
+      <tr>
+        <td rowspan="number($stepCount)">步骤</td>
+        <td colspan="2">CON Request GET</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td rowspan="number($stepCount)">步骤</td>
+        <td colspan="2">ACK Response Code=69</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>步骤</td>
+        <td>错误项</td>
+        <td>payload</td>
+        <td>f</td>
+        <td>2C3B540A</td>
+        <td>Expected payload f, but got 2C3B540A</td>
+      </tr>
+      <tr>
+        <td>步骤</td>
+        <td>错误项</td>
+        <td>Location-Path</td>
+        <td>/path</td>
+        <td>
+            </td>
+        <td>Expected Location-Path /path, but got nothing</td>
+      </tr>
+    </table>
+  </body>
+</html><html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>test case result</title>
+  </head>
+  <body>
+    <table border="1" style="border-collapse:collapse" align="center" cellpadding="4" cellspacing="0" bordercolor="#000000">
+      <tr>
+        <td>New Test0</td>
+        <td colspan="2">Name</td>
+        <td>Expected</td>
+        <td>Received</td>
+        <td>ErrorInfo</td>
+      </tr>
+      <tr>
+        <td rowspan="8">
+                  步骤
+                </td>
+        <td colspan="2">CON Request GET</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td colspan="2">ACK Response Code=69</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td rowspan="2">
+                    错误项
+                  </td>
+        <td>type</td>
+        <td>NON</td>
+        <td>ACK</td>
+        <td>Expected type NON, but got ACK</td>
+      </tr>
+      <tr>
+        <td>code</td>
+        <td>0</td>
+        <td>69</td>
+        <td>Expected code 0, but got 69</td>
+      </tr>
+      <tr>
+        <td colspan="2">CON Request GET</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td colspan="2">ACK Response Code=69</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td rowspan="2">
+                    错误项
+                  </td>
+        <td>type</td>
+        <td>NON</td>
+        <td>ACK</td>
+        <td>Expected type NON, but got ACK</td>
+      </tr>
+      <tr>
+        <td>code</td>
+        <td>0</td>
+        <td>69</td>
+        <td>Expected code 0, but got 69</td>
+      </tr>
+      <tr>
+        <td>New Test1</td>
+        <td colspan="2">Name</td>
+        <td>Expected</td>
+        <td>Received</td>
+        <td>ErrorInfo</td>
+      </tr>
+      <tr>
+        <td rowspan="2">
+                  步骤
+                </td>
+        <td colspan="2">CON Request GET</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td colspan="2">ACK Response Code=69</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>New Test2</td>
+        <td colspan="2">Name</td>
+        <td>Expected</td>
+        <td>Received</td>
+        <td>ErrorInfo</td>
+      </tr>
+      <tr>
+        <td rowspan="4">
+                  步骤
+                </td>
+        <td colspan="2">CON Request GET</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td colspan="2">ACK Response Code=69</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td rowspan="2">
+                    错误项
+                  </td>
+        <td>payload</td>
+        <td>f</td>
+        <td>2C3B540A</td>
+        <td>Expected payload f, but got 2C3B540A</td>
+      </tr>
+      <tr>
+        <td>Location-Path</td>
+        <td>/path</td>
+        <td>
+            </td>
+        <td>Expected Location-Path /path, but got nothing</td>
+      </tr>
+      <tr>
+        <td colspan="6">
+              成功2
+              个，失败
+              1
+              个
+            </td>
+      </tr>
+    </table>
+  </body>
+</html><html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>test case result</title>
+  </head>
+  <body>
+    <h2 style="text-align:center">CoAP协议测试结果</h2>
+    <table border="1" style="border-collapse:collapse" align="center" cellpadding="4" cellspacing="0" bordercolor="#000000">
+      <tr>
+        <td>New Test0</td>
+        <td colspan="2">Name</td>
+        <td>Expected</td>
+        <td>Received</td>
+        <td>ErrorInfo</td>
+      </tr>
+      <tr>
+        <td rowspan="8">
+                  步骤
+                </td>
+        <td colspan="2">CON Request GET</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td colspan="2">ACK Response Code=69</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td rowspan="2">
+                    错误项
+                  </td>
+        <td>type</td>
+        <td>NON</td>
+        <td>ACK</td>
+        <td>Expected type NON, but got ACK</td>
+      </tr>
+      <tr>
+        <td>code</td>
+        <td>0</td>
+        <td>69</td>
+        <td>Expected code 0, but got 69</td>
+      </tr>
+      <tr>
+        <td colspan="2">CON Request GET</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td colspan="2">ACK Response Code=69</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td rowspan="2">
+                    错误项
+                  </td>
+        <td>type</td>
+        <td>NON</td>
+        <td>ACK</td>
+        <td>Expected type NON, but got ACK</td>
+      </tr>
+      <tr>
+        <td>code</td>
+        <td>0</td>
+        <td>69</td>
+        <td>Expected code 0, but got 69</td>
+      </tr>
+      <tr>
+        <td>New Test1</td>
+        <td colspan="2">Name</td>
+        <td>Expected</td>
+        <td>Received</td>
+        <td>ErrorInfo</td>
+      </tr>
+      <tr>
+        <td rowspan="2">
+                  步骤
+                </td>
+        <td colspan="2">CON Request GET</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td colspan="2">ACK Response Code=69</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>New Test2</td>
+        <td colspan="2">Name</td>
+        <td>Expected</td>
+        <td>Received</td>
+        <td>ErrorInfo</td>
+      </tr>
+      <tr>
+        <td rowspan="4">
+                  步骤
+                </td>
+        <td colspan="2">CON Request GET</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td colspan="2">ACK Response Code=69</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td rowspan="2">
+                    错误项
+                  </td>
+        <td>payload</td>
+        <td>f</td>
+        <td>2C3B540A</td>
+        <td>Expected payload f, but got 2C3B540A</td>
+      </tr>
+      <tr>
+        <td>Location-Path</td>
+        <td>/path</td>
+        <td>
+            </td>
+        <td>Expected Location-Path /path, but got nothing</td>
+      </tr>
+      <tr>
+        <td colspan="6">
+              成功2
+              个，失败
+              1
+              个
+            </td>
+      </tr>
+    </table>
+  </body>
+</html><html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>test case result</title>
+  </head>
+  <body>
+    <h2 style="text-align:center">CoAP协议测试结果</h2>
+    <table border="1" style="border-collapse:collapse" align="center" cellpadding="4" cellspacing="0" bordercolor="#000000">
+      <tr>
+        <td>New Test0</td>
+        <td colspan="2">Name</td>
+        <td>Expected</td>
+        <td>Received</td>
+        <td>ErrorInfo</td>
+      </tr>
+      <tr>
+        <td rowspan="8">
+                  步骤
+                </td>
+        <td colspan="2">CON Request GET</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td colspan="2">ACK Response Code=69</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td rowspan="2">
+                    错误项
+                  </td>
+        <td>type</td>
+        <td>NON</td>
+        <td>ACK</td>
+        <td>Expected type NON, but got ACK</td>
+      </tr>
+      <tr>
+        <td>code</td>
+        <td>0</td>
+        <td>69</td>
+        <td>Expected code 0, but got 69</td>
+      </tr>
+      <tr>
+        <td colspan="2">CON Request GET</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td colspan="2">ACK Response Code=69</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td rowspan="2">
+                    错误项
+                  </td>
+        <td>type</td>
+        <td>NON</td>
+        <td>ACK</td>
+        <td>Expected type NON, but got ACK</td>
+      </tr>
+      <tr>
+        <td>code</td>
+        <td>0</td>
+        <td>69</td>
+        <td>Expected code 0, but got 69</td>
+      </tr>
+      <tr>
+        <td>New Test1</td>
+        <td colspan="2">Name</td>
+        <td>Expected</td>
+        <td>Received</td>
+        <td>ErrorInfo</td>
+      </tr>
+      <tr>
+        <td rowspan="2">
+                  步骤
+                </td>
+        <td colspan="2">CON Request GET</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td colspan="2">ACK Response Code=69</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>New Test2</td>
+        <td colspan="2">Name</td>
+        <td>Expected</td>
+        <td>Received</td>
+        <td>ErrorInfo</td>
+      </tr>
+      <tr>
+        <td rowspan="4">
+                  步骤
+                </td>
+        <td colspan="2">CON Request GET</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td colspan="2">ACK Response Code=69</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td rowspan="2">
+                    错误项
+                  </td>
+        <td>payload</td>
+        <td>f</td>
+        <td>2C3B540A</td>
+        <td>Expected payload f, but got 2C3B540A</td>
+      </tr>
+      <tr>
+        <td>Location-Path</td>
+        <td>/path</td>
+        <td>
+            </td>
+        <td>Expected Location-Path /path, but got nothing</td>
+      </tr>
+      <tr>
+        <td colspan="6">
+              成功2
+              个，失败
+              1
+              个
+            </td>
+      </tr>
+    </table>
+  </body>
+</html>

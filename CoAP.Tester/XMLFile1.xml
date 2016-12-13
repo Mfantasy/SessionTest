@@ -1,0 +1,349 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <testCase name="TD_COAP_CORE_1_1">
+    <group>组1</group>
+    <identifier>TD_COAP_CORE_1_1</identifier>
+    <objective>Perform GET transaction (CON mode) (expected response)</objective>
+    <configuration>CoAP_CFG_01</configuration>
+    <pre-testconditions>Server offers the resource /test that handle2 GET with an arbitrary payload</pre-testconditions>
+    <testSequence>
+      Step 1. Send a GET request with:
+      - Type = 0 (CON)
+      - Code = 1 (GET)
+      Step 2. Check server's response containing:
+      - Code = 69 (2.05 Content)
+      - The same Message ID as that of the previous request
+      - Content type option
+    </testSequence>
+    <testCaseItem>
+      <testCaseRequest>
+        <method>Get</method>
+        <messageType>Con</messageType>
+        <payLoad>Hello world</payLoad>
+        <token></token>
+        <optionType>
+          <uriPath>/test</uriPath>
+          <uriQuery></uriQuery>
+          <accept></accept>
+          <content-Format></content-Format>
+          <block1></block1>
+          <block2></block2>
+          <observe></observe>
+          <eTag></eTag>
+          <if-Match></if-Match>
+          <if-None-Match></if-None-Match>
+          <uri-Host></uri-Host>
+          <uri-Port></uri-Port>
+          <proxy-Uri></proxy-Uri>
+          <proxy-Scheme></proxy-Scheme>
+          <max-Age></max-Age>
+          <location-Path></location-Path>
+          <location-Query></location-Query>
+        </optionType>
+      </testCaseRequest>
+      <testCaseResponse>
+        <code></code>
+        <messageType></messageType>
+        <sameMID></sameMID>
+        <payLoad></payLoad>
+        <token></token>
+        <optionType>
+          <uriPath>/test</uriPath>
+          <uriQuery></uriQuery>
+          <accept></accept>
+          <content-Format></content-Format>
+          <block1></block1>
+          <block2></block2>
+          <observe></observe>
+          <eTag></eTag>
+          <if-Match></if-Match>
+          <if-None-Match></if-None-Match>
+          <uri-Host></uri-Host>
+          <uri-Port></uri-Port>
+          <proxy-Uri></proxy-Uri>
+          <proxy-Scheme></proxy-Scheme>
+          <max-Age></max-Age>
+          <location-Path></location-Path>
+          <location-Query></location-Query>
+        </optionType>
+      
+    </testCaseResponse>
+    </testCaseItem>
+  </testCase>
+  <testCase name="TD_COAP_CORE_1_2">
+    <group>组1</group>
+    <identifier>TD_COAP_CORE_1_2</identifier>
+    <objective>Perform GET transaction (CON mode) (expected response)</objective>
+    <configuration>CoAP_CFG_12</configuration>
+    <pre-testconditions>Server offers the resource /test that handle2 GET with an arbitrary payload</pre-testconditions>
+    <testSequence>
+      Step 1. Send a GET request with:
+      - Type = 0 (CON)
+      - Code = 1 (GET)
+      Step 2. Check server's response containing:
+      - Code = 69 (2.05 Content)
+      - The same Message ID as that of the previous request
+      - Content type option
+    </testSequence>
+    <testCaseItem>
+      <testCaseRequest>
+        <method>Get</method>
+        <messageType>Con</messageType>
+        <payLoad>Hello world</payLoad>
+        <token>no token</token>
+        <optionType>
+          <uriPath>/test</uriPath>
+          <uriQuery></uriQuery>
+          <accept></accept>
+          <content-Format></content-Format>
+          <block1></block1>
+          <block2></block2>
+          <observe></observe>
+          <eTag></eTag>
+          <if-Match></if-Match>
+          <if-None-Match></if-None-Match>
+          <uri-Host></uri-Host>
+          <uri-Port></uri-Port>
+          <proxy-Uri></proxy-Uri>
+          <proxy-Scheme></proxy-Scheme>
+          <max-Age></max-Age>
+          <location-Path></location-Path>
+          <location-Query></location-Query>
+        </optionType>
+      </testCaseRequest>
+      <testCaseResponse>
+        <code></code>
+        <messageType></messageType>
+        <sameMID></sameMID>
+        <payLoad></payLoad>
+        <token></token>
+        <optionType>
+          <uriPath>/test</uriPath>
+          <uriQuery></uriQuery>
+          <accept></accept>
+          <content-Format></content-Format>
+          <block1></block1>
+          <block2></block2>
+          <observe></observe>
+          <eTag></eTag>
+          <if-Match></if-Match>
+          <if-None-Match></if-None-Match>
+          <uri-Host></uri-Host>
+          <uri-Port></uri-Port>
+          <proxy-Uri></proxy-Uri>
+          <proxy-Scheme></proxy-Scheme>
+          <max-Age></max-Age>
+          <location-Path></location-Path>
+          <location-Query></location-Query>
+        </optionType>
+      </testCaseResponse>
+    </testCaseItem>
+  </testCase>
+  <testCase name="TD_COAP_CORE_2_1">
+    <group>组2</group>
+    <identifier>TD_COAP_CORE_2_1</identifier>
+    <objective>Perform GET transaction (CON mode) (expected response)</objective>
+    <configuration>CoAP_CFG_21</configuration>
+    <pre-testconditions>Server offers the resource /test that handle2 GET with an arbitrary payload</pre-testconditions>
+    <testSequence>
+      Step 1. Send a GET request with:
+      - Type = 0 (CON)
+      - Code = 1 (GET)
+      Step 2. Check server's response containing:
+      - Code = 69 (2.05 Content)
+      - The same Message ID as that of the previous request
+      - Content type option
+    </testSequence>
+    <testCaseItem>
+      <testCaseRequest>
+        <method>Get</method>
+        <messageType>Con</messageType>
+        <payLoad>Hello world</payLoad>
+        <token>no token</token>
+        <optionType>
+          <uriPath>/test</uriPath>
+          <uriQuery></uriQuery>
+          <accept></accept>
+          <content-Format></content-Format>
+          <block1></block1>
+          <block2></block2>
+          <observe></observe>
+          <eTag></eTag>
+          <if-Match></if-Match>
+          <if-None-Match></if-None-Match>
+          <uri-Host></uri-Host>
+          <uri-Port></uri-Port>
+          <proxy-Uri></proxy-Uri>
+          <proxy-Scheme></proxy-Scheme>
+          <max-Age></max-Age>
+          <location-Path></location-Path>
+          <location-Query></location-Query>
+        </optionType>
+      </testCaseRequest>
+      <testCaseResponse>
+        <code></code>
+        <messageType></messageType>
+        <sameMID></sameMID>
+        <payLoad></payLoad>
+        <token></token>
+        <optionType>
+          <uriPath>/test</uriPath>
+          <uriQuery></uriQuery>
+          <accept></accept>
+          <content-Format></content-Format>
+          <block1></block1>
+          <block2></block2>
+          <observe></observe>
+          <eTag></eTag>
+          <if-Match></if-Match>
+          <if-None-Match></if-None-Match>
+          <uri-Host></uri-Host>
+          <uri-Port></uri-Port>
+          <proxy-Uri></proxy-Uri>
+          <proxy-Scheme></proxy-Scheme>
+          <max-Age></max-Age>
+          <location-Path></location-Path>
+          <location-Query></location-Query>
+        </optionType>
+      </testCaseResponse>
+    </testCaseItem>
+  </testCase>
+  <testCase name="TD_COAP_CORE_2_2">
+    <group>组2</group>
+    <identifier>TD_COAP_CORE_2_2</identifier>
+    <objective>Perform GET transaction (CON mode) (expected response)</objective>
+    <configuration>CoAP_CFG_22</configuration>
+    <pre-testconditions>Server offers the resource /test that handle2 GET with an arbitrary payload</pre-testconditions>
+    <testSequence>
+      Step 1. Send a GET request with:
+      - Type = 0 (CON)
+      - Code = 1 (GET)
+      Step 2. Check server's response containing:
+      - Code = 69 (2.05 Content)
+      - The same Message ID as that of the previous request
+      - Content type option
+    </testSequence>
+    <testCaseItem>
+      <testCaseRequest>
+        <method>Get</method>
+        <messageType>Con</messageType>
+        <payLoad>Hello world</payLoad>
+        <token>no token</token>
+        <optionType>
+          <uriPath>/test</uriPath>
+          <uriQuery></uriQuery>
+          <accept></accept>
+          <content-Format></content-Format>
+          <block1></block1>
+          <block2></block2>
+          <observe></observe>
+          <eTag></eTag>
+          <if-Match></if-Match>
+          <if-None-Match></if-None-Match>
+          <uri-Host></uri-Host>
+          <uri-Port></uri-Port>
+          <proxy-Uri></proxy-Uri>
+          <proxy-Scheme></proxy-Scheme>
+          <max-Age></max-Age>
+          <location-Path></location-Path>
+          <location-Query></location-Query>
+        </optionType>
+      </testCaseRequest>
+      <testCaseResponse>
+        <code></code>
+        <messageType></messageType>
+        <sameMID></sameMID>
+        <payLoad></payLoad>
+        <token></token>
+        <optionType>
+          <uriPath>/test</uriPath>
+          <uriQuery></uriQuery>
+          <accept></accept>
+          <content-Format></content-Format>
+          <block1></block1>
+          <block2></block2>
+          <observe></observe>
+          <eTag></eTag>
+          <if-Match></if-Match>
+          <if-None-Match></if-None-Match>
+          <uri-Host></uri-Host>
+          <uri-Port></uri-Port>
+          <proxy-Uri></proxy-Uri>
+          <proxy-Scheme></proxy-Scheme>
+          <max-Age></max-Age>
+          <location-Path></location-Path>
+          <location-Query></location-Query>
+        </optionType>
+      </testCaseResponse>
+    </testCaseItem>
+  </testCase>
+  <testCase name="TD_COAP_CORE_2_3">
+    <group>组2</group>
+    <identifier>TD_COAP_CORE_2_3</identifier>
+    <objective>Perform GET transaction (CON mode) (expected response)</objective>
+    <configuration>CoAP_CFG_23</configuration>
+    <pre-testconditions>Server offers the resource /test that handle2 GET with an arbitrary payload</pre-testconditions>
+    <testSequence>
+      Step 1. Send a GET request with:
+      - Type = 0 (CON)
+      - Code = 1 (GET)
+      Step 2. Check server's response containing:
+      - Code = 69 (2.05 Content)
+      - The same Message ID as that of the previous request
+      - Content type option
+    </testSequence>
+    <testCaseItem>
+      <testCaseRequest>
+        <method>Get</method>
+        <messageType>Con</messageType>
+        <payLoad>Hello world</payLoad>
+        <token>no token</token>
+        <optionType>
+          <uriPath>/test</uriPath>
+          <uriQuery></uriQuery>
+          <accept></accept>
+          <content-Format></content-Format>
+          <block1></block1>
+          <block2></block2>
+          <observe></observe>
+          <eTag></eTag>
+          <if-Match></if-Match>
+          <if-None-Match></if-None-Match>
+          <uri-Host></uri-Host>
+          <uri-Port></uri-Port>
+          <proxy-Uri></proxy-Uri>
+          <proxy-Scheme></proxy-Scheme>
+          <max-Age></max-Age>
+          <location-Path></location-Path>
+          <location-Query></location-Query>
+        </optionType>
+      </testCaseRequest>
+      <testCaseResponse>
+        <code></code>
+        <messageType></messageType>
+        <sameMID></sameMID>
+        <payLoad></payLoad>
+        <token></token>
+        <optionType>
+          <uriPath>/test</uriPath>
+          <uriQuery></uriQuery>
+          <accept></accept>
+          <content-Format></content-Format>
+          <block1></block1>
+          <block2></block2>
+          <observe></observe>
+          <eTag></eTag>
+          <if-Match></if-Match>
+          <if-None-Match></if-None-Match>
+          <uri-Host></uri-Host>
+          <uri-Port></uri-Port>
+          <proxy-Uri></proxy-Uri>
+          <proxy-Scheme></proxy-Scheme>
+          <max-Age></max-Age>
+          <location-Path></location-Path>
+          <location-Query></location-Query>
+        </optionType>
+      </testCaseResponse>
+    </testCaseItem>
+  </testCase>
+</root>

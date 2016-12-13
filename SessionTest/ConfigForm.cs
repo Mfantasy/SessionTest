@@ -90,7 +90,7 @@ namespace SessionTest
         {
             RadioButton rb = new RadioButton();
             rb.AutoSize = true;
-            rb.Text = string.Format("测试地址({0})", CustomConfig.testIp);         
+            rb.Text = string.Format("默认地址({0})", CustomConfig.testIp);         
             rb.Tag = CustomConfig.testIp;
             rb.Parent = tableLayoutPanel1;
             rb.Checked = true;

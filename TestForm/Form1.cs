@@ -36,15 +36,10 @@ namespace TestForm
                 MyAngle += 0.5f;
             }
         }
-        ConfigForm fm;
+        
         private void button1_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < 88; i++)
-            {
-                int j = i;
-                Thread th = new Thread(()=>Test(j));
-                th.Start();
-            }                        
+            //CreateSocket;                      
         }
 
         void Test(int i)

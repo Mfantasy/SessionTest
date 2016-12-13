@@ -12,14 +12,34 @@ namespace SessionTest
 {
     public static class CreateSocket
     {
+        public static void OpenNB(int port)
+        {
+
+        }
+
+        public static void OpenGPRS(int port)
+        { }
+
+        public static void CloseNB()
+        { }
+        
+        public static void CloseGPRS()
+        { }
+
+        static Socket nbServer;
+
+        static Socket gpServer;
+
         static void CreateServer(object pt)
         {
+            
             int port = (int)pt;
             Socket server = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             var ipe = new IPEndPoint(IPAddress.Any, port);
             server.Bind(ipe);
-            server.Listen(10);
-
+            server.Listen(10);           
+            //server.Shutdown(SocketShutdown.Both);
+            
             //不断监听端口
             while (true)
             {

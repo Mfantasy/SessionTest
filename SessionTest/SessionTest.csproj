@@ -124,6 +124,12 @@
     <None Include="Resources\btn1.png" />
     <None Include="Resources\btn.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CoAP.Tester\CoAP.Tester.csproj">
+      <Project>{c396c220-7ec2-4e64-8cf3-6c8cb5a9534e}</Project>
+      <Name>CoAP.Tester</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

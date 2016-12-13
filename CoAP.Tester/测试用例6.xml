@@ -1,0 +1,883 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <testCase name="TD_COAP_CORE_01">
+    <group>CoAP protocol</group>
+    <identifier>TD_COAP_CORE_01</identifier>
+    <objective>Perform GET transaction (CON mode)</objective>
+    <configuration>CoAP_CFG_01</configuration>
+    <pre-testconditions>Server offers the resource /test that handle GET with an arbitrary payload</pre-testconditions>
+    <testSequence>Client is requested to send a GET request with:
+• Type = 0(CON)
+• Code = 1(GET)
+Server sends response containing:
+• Code = 69(2.05 Content)
+• The same Message ID as that of the previous request
+• Content type option</testSequence>
+    <testCaseItem>
+      <testCaseRequest>
+        <method>GET</method>
+        <messageType>CON</messageType>
+        <payLoad>
+        </payLoad>
+        <token>
+        </token>
+        <optionType>
+          <uriPath>/test</uriPath>
+        </optionType>
+      </testCaseRequest>
+      <testCaseResponse>
+        <code>69</code>
+        <messageType>ACK</messageType>
+        <sameMID>TRUE</sameMID>
+        <optionType />
+      </testCaseResponse>
+    </testCaseItem>
+  </testCase>
+  <testCase name="TD_COAP_CORE_02">
+    <group>CoAP protocol</group>
+    <identifier>TD_COAP_CORE_02</identifier>
+    <objective>Perform POST transaction (CON mode)</objective>
+    <configuration>CoAP_CFG_01</configuration>
+    <pre-testconditions>Server accepts creation of new resource on /test (resource does not exists yet)</pre-testconditions>
+    <testSequence>Client is requested to send a POST request with:
+• Type = 0(CON)
+• Code = 2(POST)
+• An arbitrary payload
+• Content type option
+Server sends response containing:
+• Code = 65(2.01 Created)
+• The same Message ID as that of the previous request</testSequence>
+    <testCaseItem>
+      <testCaseRequest>
+        <method>POST</method>
+        <messageType>CON</messageType>
+        <payLoad>
+        </payLoad>
+        <token>
+        </token>
+        <optionType>
+          <uriPath>/test</uriPath>
+        </optionType>
+      </testCaseRequest>
+      <testCaseResponse>
+        <code>65</code>
+        <messageType>ACK</messageType>
+        <sameMID>TRUE</sameMID>
+        <optionType />
+      </testCaseResponse>
+    </testCaseItem>
+  </testCase>
+  <testCase name="TD_COAP_CORE_03">
+    <group>CoAP protocol</group>
+    <identifier>TD_COAP_CORE_03</identifier>
+    <objective>Perform PUT transaction (CON mode)</objective>
+    <configuration>CoAP_CFG_01</configuration>
+    <pre-testconditions>• Server offers a resource /test that handles PUT</pre-testconditions>
+    <testSequence>Client is requested to send a PUT request with:
+• Type = 0(CON)
+• Code = 3(PUT)
+• An arbitrary payload
+• Content type option
+Server sends response containing:
+• Code = 68(2.04 Changed)
+• The same Message ID as that of the previous request</testSequence>
+    <testCaseItem>
+      <testCaseRequest>
+        <method>PUT</method>
+        <messageType>CON</messageType>
+        <payLoad>
+        </payLoad>
+        <token>
+        </token>
+        <optionType>
+          <uriPath>/test</uriPath>
+        </optionType>
+      </testCaseRequest>
+      <testCaseResponse>
+        <code>68</code>
+        <messageType>ACK</messageType>
+        <sameMID>TRUE</sameMID>
+        <optionType />
+      </testCaseResponse>
+    </testCaseItem>
+  </testCase>
+  <testCase name="TD_COAP_CORE_04">
+    <group>CoAP protocol</group>
+    <identifier>TD_COAP_CORE_04</identifier>
+    <objective>Perform DELETE transaction (CON mode)</objective>
+    <configuration>CoAP_CFG_01</configuration>
+    <pre-testconditions>• Server offers a /test resource that handles DELETE</pre-testconditions>
+    <testSequence>Client is requested to send a DELETE request with:
+• Type = 0(CON)
+• Code = 4(DELETE)
+Server sends response containing:
+• Code = 66(2.02 Deleted)
+• The same Message ID as that of the previous request</testSequence>
+    <testCaseItem>
+      <testCaseRequest>
+        <method>DELETE</method>
+        <messageType>CON</messageType>
+        <payLoad>
+        </payLoad>
+        <token>
+        </token>
+        <optionType>
+          <uriPath>/test</uriPath>
+        </optionType>
+      </testCaseRequest>
+      <testCaseResponse>
+        <code>66</code>
+        <messageType>ACK</messageType>
+        <sameMID>TRUE</sameMID>
+        <optionType />
+      </testCaseResponse>
+    </testCaseItem>
+  </testCase>
+  <testCase name="TD_COAP_CORE_05">
+    <group>CoAP protocol</group>
+    <identifier>TD_COAP_CORE_05</identifier>
+    <objective>Perform GET transaction (NON mode)</objective>
+    <configuration>CoAP_CFG_01</configuration>
+    <pre-testconditions>• Server offers a /test resource that handles GET</pre-testconditions>
+    <testSequence>Client is requested to send a GET request with:
+• Type = 1(NON)
+• Code = 1(GET)
+Server sends response containing:
+• Type = 1(NON)
+• Code= 69(2.05 Content)
+• Content type option</testSequence>
+    <testCaseItem>
+      <testCaseRequest>
+        <method>GET</method>
+        <messageType>NON</messageType>
+        <payLoad>
+        </payLoad>
+        <token>
+        </token>
+        <optionType>
+          <uriPath>/test</uriPath>
+        </optionType>
+      </testCaseRequest>
+      <testCaseResponse>
+        <code>69</code>
+        <messageType>NON</messageType>
+        <optionType />
+      </testCaseResponse>
+    </testCaseItem>
+  </testCase>
+  <testCase name="TD_COAP_CORE_06">
+    <group>CoAP protocol</group>
+    <identifier>TD_COAP_CORE_06</identifier>
+    <objective>Perform POST transaction (NON mode)</objective>
+    <configuration>CoAP_CFG_01</configuration>
+    <pre-testconditions>• Server accepts creation of new resource on /test (resource does not exists yet)</pre-testconditions>
+    <testSequence>Client is requested to send a POST request with:
+• Type = 1(NON)
+• Code = 2(POST)
+• An arbitrary payload
+• Content type option
+Server sends response containing:
+• Type = 1(NON)
+• Code = 65(2.01 Created)</testSequence>
+    <testCaseItem>
+      <testCaseRequest>
+        <method>POST</method>
+        <messageType>NON</messageType>
+        <payLoad>
+        </payLoad>
+        <token>
+        </token>
+        <optionType>
+          <uriPath>/test</uriPath>
+        </optionType>
+      </testCaseRequest>
+      <testCaseResponse>
+        <code>65</code>
+        <messageType>NON</messageType>
+        <optionType />
+      </testCaseResponse>
+    </testCaseItem>
+  </testCase>
+  <testCase name="TD_COAP_CORE_07">
+    <group>CoAP protocol</group>
+    <identifier>TD_COAP_CORE_07</identifier>
+    <objective>Perform PUT transaction (NON mode)</objective>
+    <configuration>CoAP_CFG_01</configuration>
+    <pre-testconditions>• Server offers a /test resource that handles PUT</pre-testconditions>
+    <testSequence>Client is requested to send a PUT request with:
+• Type = 1(NON)
+• Code = 3(PUT)
+• An arbitrary payload
+• Content type option
+Server sends response containing:
+• Type = 1(NON)
+• Code = 68(2.04 Changed)</testSequence>
+    <testCaseItem>
+      <testCaseRequest>
+        <method>PUT</method>
+        <messageType>NON</messageType>
+        <payLoad>
+        </payLoad>
+        <token>
+        </token>
+        <optionType>
+          <uriPath>/test</uriPath>
+        </optionType>
+      </testCaseRequest>
+      <testCaseResponse>
+        <code>68</code>
+        <messageType>NON</messageType>
+        <optionType />
+      </testCaseResponse>
+    </testCaseItem>
+  </testCase>
+  <testCase name="TD_COAP_CORE_08">
+    <group>CoAP protocol</group>
+    <identifier>TD_COAP_CORE_08</identifier>
+    <objective>Perform DELETE transaction (NON mode)</objective>
+    <configuration>CoAP_CFG_01</configuration>
+    <pre-testconditions>• Server offers a /test resource that handles DELETE</pre-testconditions>
+    <testSequence>Client is requested to send a DELETE request with:
+• Type = 1(NON)
+• Code = 4(DELETE)
+Server sends response containing:
+• Type = 1(NON)
+• Code = 66(2.02 Deleted)</testSequence>
+    <testCaseItem>
+      <testCaseRequest>
+        <method>DELETE</method>
+        <messageType>NON</messageType>
+        <payLoad>
+        </payLoad>
+        <token>
+        </token>
+        <optionType>
+          <uriPath>/test</uriPath>
+        </optionType>
+      </testCaseRequest>
+      <testCaseResponse>
+        <code>66</code>
+        <messageType>NON</messageType>
+        <optionType />
+      </testCaseResponse>
+    </testCaseItem>
+  </testCase>
+  <testCase name="TD_COAP_CORE_09">
+    <group>CoAP protocol</group>
+    <identifier>TD_COAP_CORE_09</identifier>
+    <objective>Perform GET transaction with a separate response</objective>
+    <configuration>CoAP_CFG_01</configuration>
+    <pre-testconditions>• Server offers a resource /separate which cannot be served immediately and which
+cannot be acknowledged in a piggy-backed way.</pre-testconditions>
+    <testSequence>Sent request must contain:
+• Type = 0 (CON)
+• Code = 1 (GET)
+• Client generated Message ID
+Server sends response containing:
+• Type = 2 (ACK)
+• message ID same as the request
+• empty Payload
+Server sends response containing:
+• Type = 0 (CON)
+• Code = 69 (2.05 content)
+• Payload = Content of the requested resource
+• Content type option
+Client sends response containing:
+• Type = 2 (ACK)
+• message ID same as the response
+• empty Payload</testSequence>
+    <testCaseItem>
+      <testCaseRequest>
+        <method>GET</method>
+        <messageType>CON</messageType>
+        <payLoad>
+        </payLoad>
+        <token>
+        </token>
+        <optionType>
+          <uriPath>/separate</uriPath>
+        </optionType>
+      </testCaseRequest>
+      <testCaseResponse>
+        <code>69</code>
+        <messageType>CON</messageType>
+        <optionType />
+      </testCaseResponse>
+    </testCaseItem>
+  </testCase>
+  <testCase name="TD_COAP_CORE_10">
+    <group>CoAP protocol</group>
+    <identifier>TD_COAP_CORE_10</identifier>
+    <objective>Handle request containing Token option</objective>
+    <configuration>CoAP_CFG_01</configuration>
+    <pre-testconditions>• Server offers a /test resource that handles GET</pre-testconditions>
+    <testSequence>Sent request must contain:
+• Type = 0 (CON)
+• Code = 1 (GET)
+• Client generated Token value
+• Length of the token should be between 1 to 8 B
+• Option Type = Token
+Server sends response containing:
+• Code = 69 (2.05 content)
+• Length of the token should be between 1 to 8 B
+• Token value same as the requested
+• Payload = Content of the requested resource
+• Content type option</testSequence>
+    <testCaseItem>
+      <testCaseRequest>
+        <method>GET</method>
+        <messageType>CON</messageType>
+        <payLoad>
+        </payLoad>
+        <token>0x68656C6C6F</token>
+        <optionType>
+          <uriPath>/test</uriPath>
+        </optionType>
+      </testCaseRequest>
+      <testCaseResponse>
+        <code>69</code>
+        <messageType>ACK</messageType>
+        <payLoad>Type: 0 (CON)
+Code: 1 (GET)
+MID: 1956
+Token: 68656C6C6F</payLoad>
+        <optionType />
+      </testCaseResponse>
+    </testCaseItem>
+  </testCase>
+  <testCase name="TD_COAP_CORE_11">
+    <group>CoAP protocol</group>
+    <identifier>TD_COAP_CORE_11</identifier>
+    <objective>Handle request not containing Token option</objective>
+    <configuration>CoAP_CFG_01</configuration>
+    <pre-testconditions>• Server offers a /test resource that handles GET</pre-testconditions>
+    <testSequence>Sent request must contain:
+• Type = 0 (CON)
+• Code = 1 (GET)
+• No Token option
+Server sends response containing:
+• Code = 69 (2.05 content)
+• No Token option
+• Payload = Content of the requested resource
+• Content type option</testSequence>
+    <testCaseItem>
+      <testCaseRequest>
+        <method>GET</method>
+        <messageType>CON</messageType>
+        <payLoad>
+        </payLoad>
+        <token>
+        </token>
+        <optionType>
+          <uriPath>/test</uriPath>
+        </optionType>
+      </testCaseRequest>
+      <testCaseResponse>
+        <code>69</code>
+        <messageType>ACK</messageType>
+        <optionType />
+      </testCaseResponse>
+    </testCaseItem>
+  </testCase>
+  <testCase name="TD_COAP_CORE_12">
+    <group>CoAP protocol</group>
+    <identifier>TD_COAP_CORE_12</identifier>
+    <objective>Handle request containing several URI-Path options</objective>
+    <configuration>CoAP_CFG_01</configuration>
+    <pre-testconditions>• Server offers a /seg1/seg2/seg3 resource</pre-testconditions>
+    <testSequence>Sent request must contain:
+• Type = 0 (CON)
+• Code = 1 (GET)
+• Option type = URI-Path (one for each path segment)
+Server sends response containing:
+• Code = 69 (2.05 content)
+• Payload = Content of the requested resource
+• Content type option</testSequence>
+    <testCaseItem>
+      <testCaseRequest>
+        <method>GET</method>
+        <messageType>CON</messageType>
+        <payLoad>
+        </payLoad>
+        <token>
+        </token>
+        <optionType>
+          <uriPath>/seg1/seg2/seg3</uriPath>
+        </optionType>
+      </testCaseRequest>
+      <testCaseResponse>
+        <code>69</code>
+        <messageType>ACK</messageType>
+        <payLoad>
+        </payLoad>
+        <optionType />
+      </testCaseResponse>
+    </testCaseItem>
+  </testCase>
+  <testCase name="TD_COAP_CORE_13">
+    <group>CoAP protocol</group>
+    <identifier>TD_COAP_CORE_13</identifier>
+    <objective>Handle request containing several URI-Query options</objective>
+    <configuration>CoAP_CFG_01</configuration>
+    <pre-testconditions>• Server offers a /query resource</pre-testconditions>
+    <testSequence>Sent request must contain:
+• Type = 0 (CON)
+• Code = 1 (GET)
+• Option type = URI-Query (More than one query parameter)
+Server sends response containing:
+• Type = 0/2 (CON/ACK)
+• Code = 69 (2.05 content)
+• Payload = Content of the requested resource
+• Content type option</testSequence>
+    <testCaseItem>
+      <testCaseRequest>
+        <method>GET</method>
+        <messageType>CON</messageType>
+        <payLoad>
+        </payLoad>
+        <token>
+        </token>
+        <optionType>
+          <uriPath>/query</uriPath>
+          <uriQuery>?first=1&amp;second=2&amp;third=3</uriQuery>
+        </optionType>
+      </testCaseRequest>
+      <testCaseResponse>
+        <code>69</code>
+        <messageType>ACK</messageType>
+        <payLoad>
+        </payLoad>
+        <optionType />
+      </testCaseResponse>
+    </testCaseItem>
+  </testCase>
+  <testCase name="TD_COAP_CORE_14">
+    <group>CoAP protocol</group>
+    <identifier>TD_COAP_CORE_14</identifier>
+    <objective>Interoperate in lossy context (CON mode, piggybacked response)</objective>
+    <configuration>CoAP_CFG_02</configuration>
+    <pre-testconditions>• Gateway is introduced and configured to produce packet loss
+• Server offers a /test resource that can handle GET</pre-testconditions>
+    <testSequence>Sent request must contain:
+• Type = 0
+• Code = 1
+• Client generated Message ID
+Server sends response containing:
+• Type = 2 (ACK)
+• Code = 69 (2.05 content)
+• Payload = Content of the requested resource
+• Content type option</testSequence>
+    <testCaseItem>
+      <testCaseRequest>
+        <method>GET</method>
+        <messageType>CON</messageType>
+        <payLoad>
+        </payLoad>
+        <token>
+        </token>
+        <optionType>
+          <uriPath>/test</uriPath>
+        </optionType>
+      </testCaseRequest>
+      <testCaseResponse>
+        <code>69</code>
+        <messageType>ACK</messageType>
+        <payLoad>
+        </payLoad>
+        <optionType />
+      </testCaseResponse>
+    </testCaseItem>
+  </testCase>
+  <testCase name="TD_COAP_CORE_15">
+    <group>CoAP protocol</group>
+    <identifier>TD_COAP_CORE_15</identifier>
+    <objective>Interoperate in lossy context (CON mode, delayed response)</objective>
+    <configuration>CoAP_CFG_02</configuration>
+    <pre-testconditions>• Gateway is introduced and configured to produce packet loss
+• Server offers a /separate resource which cannot be served immediately and which
+cannot be acknowledged in a piggy-backed way.</pre-testconditions>
+    <testSequence>Sent request must contain:
+• Type = 0
+• Code = 1
+• Client generated Message ID
+Server sends response containing:
+• Type = 2 (ACK)
+• message ID same as the request
+• empty Payload
+Server sends response containing:
+• Type = 0 (CON)
+• Code = 69 (2.05 content)
+• Payload = Content of the requested resource
+• Content type option
+Client sends response containing:
+• Type = 2 (ACK)
+• message ID same as the response
+• empty Payload</testSequence>
+    <testCaseItem>
+      <testCaseRequest>
+        <method>GET</method>
+        <messageType>CON</messageType>
+        <payLoad>
+        </payLoad>
+        <token>
+        </token>
+        <optionType>
+          <uriPath>/separate</uriPath>
+        </optionType>
+      </testCaseRequest>
+      <testCaseResponse>
+        <code>69</code>
+        <messageType>CON</messageType>
+        <optionType />
+      </testCaseResponse>
+    </testCaseItem>
+  </testCase>
+  <testCase name="TD_COAP_CORE_16">
+    <group>CoAP protocol</group>
+    <identifier>TD_COAP_CORE_16</identifier>
+    <objective>Perform GET transaction with a separate response (NON mode)</objective>
+    <configuration>CoAP_CFG_01</configuration>
+    <pre-testconditions>• Server offers a resource /separate which cannot be served immediately.</pre-testconditions>
+    <testSequence>Sent request must contain:
+• Type = 1 (NON)
+• Code = 1 (GET)
+• Client generated Message ID
+Server does not send response containing:
+• Type = 2 (ACK)
+• message ID same as the request
+• empty Payload
+Server sends response containing:
+• Type = 1 (NON)
+• Code = 69 (2.05 content)
+• Payload = Content of the requested resource
+• Content type option</testSequence>
+    <testCaseItem>
+      <testCaseRequest>
+        <method>GET</method>
+        <messageType>NON</messageType>
+        <payLoad>
+        </payLoad>
+        <token>
+        </token>
+        <optionType>
+          <uriPath>/separate</uriPath>
+        </optionType>
+      </testCaseRequest>
+      <testCaseResponse>
+        <code>69</code>
+        <messageType>NON</messageType>
+        <payLoad>
+        </payLoad>
+        <optionType />
+      </testCaseResponse>
+    </testCaseItem>
+  </testCase>
+  <testCase name="TD_COAP_LINK_01">
+    <group>CoRE Link Format</group>
+    <identifier>TD_COAP_LINK_01</identifier>
+    <objective>Access to well-known interface for resource discovery</objective>
+    <configuration>CoAP_CFG_01</configuration>
+    <pre-testconditions>• Client supports CoRE Link Format
+• Server supports /.well-known/core resource and the CoRE Link Format</pre-testconditions>
+    <testSequence>Client sends a GET request to Server for /.well-known/core resource
+
+Server sends response containing:
+Content-Type option indicating 40 (application/link-format)
+payload indicating all the links available on Server</testSequence>
+    <testCaseItem>
+      <testCaseRequest>
+        <method>GET</method>
+        <messageType>CON</messageType>
+        <payLoad>
+        </payLoad>
+        <token>
+        </token>
+        <optionType>
+          <uriPath>/.well-known/core</uriPath>
+        </optionType>
+      </testCaseRequest>
+      <testCaseResponse>
+        <code>69</code>
+        <messageType>ACK</messageType>
+        <optionType>
+          <content-Format>40</content-Format>
+        </optionType>
+      </testCaseResponse>
+    </testCaseItem>
+  </testCase>
+  <testCase name="TD_COAP_LINK_02">
+    <group>CoRE Link Format</group>
+    <identifier>TD_COAP_LINK_02</identifier>
+    <objective>Use filtered requests for limiting discovery results</objective>
+    <configuration>CoAP_CFG_01</configuration>
+    <pre-testconditions>• Client supports CoRE Link Format
+• Server supports CoRE Link Format
+• Server offers different types of resources (Type1, Type2, ...; see Note)</pre-testconditions>
+    <testSequence>Client sends a GET request to Server for /.well-known/core
+resource containing URI-Query indicating “rt=Type1”
+Server sends response containing:
+Content-Type option indicating 40 (application/link-format)
+payload indicating only the links of type Type1 available on
+Server</testSequence>
+    <testCaseItem>
+      <testCaseRequest>
+        <method>GET</method>
+        <messageType>CON</messageType>
+        <payLoad>
+        </payLoad>
+        <token>
+        </token>
+        <optionType>
+          <uriPath>/.well-known/core</uriPath>
+          <uriQuery>?rt=Type1</uriQuery>
+        </optionType>
+      </testCaseRequest>
+      <testCaseResponse>
+        <code>69</code>
+        <messageType>ACK</messageType>
+        <payLoad>Type1</payLoad>
+        <optionType>
+          <content-Format>40</content-Format>
+        </optionType>
+      </testCaseResponse>
+    </testCaseItem>
+  </testCase>
+  <testCase name="TD_COAP_BLOCK_01">
+    <group>Blockwise transfers</group>
+    <identifier>TD_COAP_BLOCK_01</identifier>
+    <objective>Handle GET blockwise transfer for large resource (early negotiation)</objective>
+    <configuration>CoAP_CFG_01</configuration>
+    <pre-testconditions>• Client supports Block transfers
+• Server supports Block transfers
+• Server offers a large resource /large
+• Client knows /large requires block transfer</pre-testconditions>
+    <testSequence>Client sends a GET request containing Block2 option
+indicating block number 0 and desired block size
+Server sends response containing
+Block2 option indicating block number and size
+Client send GET requests for further blocks
+Each request contains Block2 option indicating block number
+of the next block and size of the last received block
+Server sends further responses containing
+Block2 option indicating block number and size</testSequence>
+    <testCaseItem>
+      <testCaseRequest>
+        <method>GET</method>
+        <messageType>CON</messageType>
+        <payLoad>
+        </payLoad>
+        <token>
+        </token>
+        <optionType>
+          <uriPath>/large</uriPath>
+          <block2>0</block2>
+        </optionType>
+      </testCaseRequest>
+      <testCaseResponse>
+        <code>69</code>
+        <messageType>ACK</messageType>
+        <payLoad>
+        </payLoad>
+        <optionType />
+      </testCaseResponse>
+    </testCaseItem>
+  </testCase>
+  <testCase name="TD_COAP_BLOCK_02">
+    <group>Blockwise transfers</group>
+    <identifier>TD_COAP_BLOCK_02</identifier>
+    <objective>Handle GET blockwise transfer for large resource (late negotiation)</objective>
+    <configuration>CoAP_CFG_01</configuration>
+    <pre-testconditions>• Client supports Block transfers
+• Server supports Block transfers
+• Server offers a large resource /large
+• Client does not know /large requires block transfer</pre-testconditions>
+    <testSequence>Client sends a GET request not containing Block2 option
+Server sends response containing
+Block2 option indicating block number and size
+Client send GET requests for further blocks
+Each request contains Block2 option indicating block number of the next block and size of the last received block or the desired size of next block
+Server sends further responses containing
+Block2 option indicating block number and size</testSequence>
+    <testCaseItem>
+      <testCaseRequest>
+        <method>GET</method>
+        <messageType>CON</messageType>
+        <payLoad>
+        </payLoad>
+        <token>
+        </token>
+        <optionType>
+          <uriPath>/large</uriPath>
+          <block2>0</block2>
+        </optionType>
+      </testCaseRequest>
+      <testCaseResponse>
+        <code>69</code>
+        <messageType>ACK</messageType>
+        <optionType />
+      </testCaseResponse>
+    </testCaseItem>
+  </testCase>
+  <testCase name="TD_COAP_BLOCK_03">
+    <group>Blockwise transfers</group>
+    <identifier>TD_COAP_BLOCK_03</identifier>
+    <objective>Handle PUT blockwise transfer for large resource</objective>
+    <configuration>CoAP_CFG_01</configuration>
+    <pre-testconditions>• Client supports Block transfers
+• Server supports Block transfers
+• Server offers a large updatable resource /large-update</pre-testconditions>
+    <testSequence>Client sends a PUT request containing Block1 option
+indicating block number 0 and block size
+Client sends further requests containing
+Block1 option indicating block number and size</testSequence>
+    <testCaseItem>
+      <testCaseRequest>
+        <method>PUT</method>
+        <messageType>CON</messageType>
+        <payLoad>
+        </payLoad>
+        <token>
+        </token>
+        <optionType>
+          <uriPath>/large-update</uriPath>
+        </optionType>
+      </testCaseRequest>
+      <testCaseResponse>
+        <code>69</code>
+        <messageType>ACK</messageType>
+        <optionType />
+      </testCaseResponse>
+    </testCaseItem>
+  </testCase>
+  <testCase name="TD_COAP_BLOCK_04">
+    <group>Blockwise transfers</group>
+    <identifier>TD_COAP_BLOCK_04</identifier>
+    <objective>Handle POST blockwise transfer for large resource</objective>
+    <configuration>CoAP_CFG_01</configuration>
+    <pre-testconditions>• Client supports Block transfers
+• Server supports Block transfers
+• Server accepts creation of new resources on /large-create</pre-testconditions>
+    <testSequence>Client sends a POST request containing Block1 option
+indicating block number 0 and block size
+Client sends further requests containing
+Block1 option indicating block number and size</testSequence>
+    <testCaseItem>
+      <testCaseRequest>
+        <method>POST</method>
+        <messageType>CON</messageType>
+        <payLoad>
+        </payLoad>
+        <token>
+        </token>
+        <optionType>
+          <uriPath>/large-create</uriPath>
+        </optionType>
+      </testCaseRequest>
+      <testCaseResponse>
+        <code>69</code>
+        <messageType>ACK</messageType>
+        <optionType />
+      </testCaseResponse>
+    </testCaseItem>
+  </testCase>
+  <testCase name="TD_COAP_OBS_01">
+    <group>Observing Resources</group>
+    <identifier>TD_COAP_OBS_01</identifier>
+    <objective>Handle resource observation</objective>
+    <configuration>CoAP_CFG_01</configuration>
+    <pre-testconditions>• Client supports Observe option
+• Server supports Observe option
+• Server offers an observable resource /obs which changes periodically (e.g. every
+5s)</pre-testconditions>
+    <testSequence>Client sends a GET request containing Observe option
+indicating 0
+Server sends response containing Observe option indicating increasing values, as resource changes
+Client displays the updated information</testSequence>
+    <testCaseItem>
+      <testCaseRequest>
+        <method>GET</method>
+        <messageType>CON</messageType>
+        <payLoad>
+        </payLoad>
+        <token>
+        </token>
+        <optionType>
+          <uriPath>/obs</uriPath>
+          <observe>0</observe>
+        </optionType>
+      </testCaseRequest>
+      <testCaseResponse>
+        <code>69</code>
+        <messageType>ACK</messageType>
+        <optionType />
+      </testCaseResponse>
+    </testCaseItem>
+  </testCase>
+  <testCase name="TD_COAP_OBS_02">
+    <group>Observing Resources</group>
+    <identifier>TD_COAP_OBS_02</identifier>
+    <objective>Stop resource observation</objective>
+    <configuration>CoAP_CFG_01</configuration>
+    <pre-testconditions>• Client supports Observe option
+• Server supports Observe option
+• Server offers an observable resource /obs which changes periodically (e.g. every
+5s)
+• Client is observing /obs on Server</pre-testconditions>
+    <testSequence>Client sends GET request not containing Observe option
+Server sends response not containing Observe option
+Client displays the received information
+Server does not send further response
+Client does not display updated information</testSequence>
+    <testCaseItem>
+      <testCaseRequest>
+        <method>GET</method>
+        <messageType>CON</messageType>
+        <payLoad>
+        </payLoad>
+        <token>
+        </token>
+        <optionType>
+          <uriPath>/obs</uriPath>
+        </optionType>
+      </testCaseRequest>
+      <testCaseResponse>
+        <code>69</code>
+        <messageType>ACK</messageType>
+        <optionType />
+      </testCaseResponse>
+    </testCaseItem>
+  </testCase>
+  <testCase name="TD_COAP_OBS_03">
+    <group>Observing Resources</group>
+    <identifier>TD_COAP_OBS_03</identifier>
+    <objective>Client detection of deregistration (Max-Age)</objective>
+    <configuration>CoAP_CFG_01</configuration>
+    <pre-testconditions>• Client supports Observe option
+• Server supports Observe option
+• Server offers an observable resource /obs which changes periodically (e.g. every
+5s)
+• Client is observing /obs on Server</pre-testconditions>
+    <testSequence>Server does not send notifications
+Client does not display updated information
+After Max-Age expiration, Client sends a new GET with
+Observe option for Server’s observable resource
+Sent request contains Observe option indicating 0
+Server sends response containing Observe option
+Client displays the received information
+Server sends response containing Observe option indicating increasing values, as resource changes
+Client displays the updated information</testSequence>
+    <testCaseItem>
+      <testCaseRequest>
+        <method>GET</method>
+        <messageType>CON</messageType>
+        <payLoad>
+        </payLoad>
+        <token>
+        </token>
+        <optionType>
+          <uriPath>/obs</uriPath>
+        </optionType>
+      </testCaseRequest>
+    </testCaseItem>
+  </testCase>
+</root>

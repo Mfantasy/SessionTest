@@ -14,6 +14,7 @@ using System.Windows.Forms;
 using System.Configuration;
 using System.Text.RegularExpressions;
 using System.Threading;
+using CoAP.Tester;
 
 namespace SessionTest
 {
@@ -55,8 +56,14 @@ namespace SessionTest
                 ctrl.Dock = DockStyle.Fill;
                 panelContext.Controls.Add(ctrl);             
             }
-            panel首页.BringToFront();                        
-            //ThreadPool.QueueUserWorkItem(ScanIpsL);
+            panel首页.BringToFront();
+            panelCoap测试.AutoScroll = true;
+            FormMain fm = new FormMain();
+            fm.TopLevel = false;
+            fm.Parent = panelCoap测试;
+            fm.FormBorderStyle = FormBorderStyle.None;
+            fm.Show();
+            ThreadPool.QueueUserWorkItem(ScanIpsL);
         }
 
 
