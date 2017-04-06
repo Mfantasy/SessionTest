@@ -80,6 +80,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CoAP.Tester\CoAP.Tester.csproj">
+      <Project>{c396c220-7ec2-4e64-8cf3-6c8cb5a9534e}</Project>
+      <Name>CoAP.Tester</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SessionTest\SessionTest.csproj">
       <Project>{3b0b5936-71b6-4c10-9406-4a5386bdf47b}</Project>
       <Name>SessionTest</Name>

@@ -15,5 +15,7 @@ namespace SessionTest
         public static int nbPort = int.Parse(ConfigurationManager.AppSettings["nbPort"]);
         public static int gsPort = int.Parse(ConfigurationManager.AppSettings["gsPort"]);
         public static string currentIp = testIp;
+        public static bool OpenIpScan = bool.Parse(ConfigurationManager.AppSettings["是否开启连接管理"]);
+    
     }
 }

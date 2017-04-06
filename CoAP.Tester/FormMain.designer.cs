@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-            System.Windows.Forms.TreeListViewItemCollection.TreeListViewItemCollectionComparer treeListViewItemCollectionComparer1 = new System.Windows.Forms.TreeListViewItemCollection.TreeListViewItemCollectionComparer();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.TreeListViewItemCollection.TreeListViewItemCollectionComparer treeListViewItemCollectionComparer2 = new System.Windows.Forms.TreeListViewItemCollection.TreeListViewItemCollectionComparer();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.文件ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.打开服务器端ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -211,9 +211,10 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(866, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1008, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.Visible = false;
             // 
             // 文件ToolStripMenuItem
             // 
@@ -331,6 +332,7 @@
             this.版本信息ToolStripMenuItem.Name = "版本信息ToolStripMenuItem";
             this.版本信息ToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
             this.版本信息ToolStripMenuItem.Text = "关于软件";
+            this.版本信息ToolStripMenuItem.Visible = false;
             // 
             // coAP协议一致性测试V10ToolStripMenuItem
             // 
@@ -363,9 +365,9 @@
             this.tscbxTargetAddress,
             this.toolStripSeparator2,
             this.toolStripButton6});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 24);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(866, 37);
+            this.toolStrip1.Size = new System.Drawing.Size(1008, 37);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -542,17 +544,17 @@
             this.toolStripStatusLabel2,
             this.pbTestCase,
             this.lStep});
-            this.statusStrip2.Location = new System.Drawing.Point(0, 635);
+            this.statusStrip2.Location = new System.Drawing.Point(0, 656);
             this.statusStrip2.Name = "statusStrip2";
             this.statusStrip2.Padding = new System.Windows.Forms.Padding(1, 0, 16, 0);
-            this.statusStrip2.Size = new System.Drawing.Size(866, 25);
+            this.statusStrip2.Size = new System.Drawing.Size(1008, 25);
             this.statusStrip2.TabIndex = 3;
             this.statusStrip2.Text = "statusStrip2";
             // 
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(41, 20);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(44, 20);
             this.toolStripStatusLabel1.Text = "总进度";
             // 
             // pbTotal
@@ -563,13 +565,13 @@
             // lTCName
             // 
             this.lTCName.Name = "lTCName";
-            this.lTCName.Size = new System.Drawing.Size(77, 20);
+            this.lTCName.Size = new System.Drawing.Size(95, 20);
             this.lTCName.Text = "TestCaseNmae";
             // 
             // toolStripStatusLabel2
             // 
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(53, 20);
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(56, 20);
             this.toolStripStatusLabel2.Text = "用例进度";
             // 
             // pbTestCase
@@ -580,7 +582,7 @@
             // lStep
             // 
             this.lStep.Name = "lStep";
-            this.lStep.Size = new System.Drawing.Size(29, 20);
+            this.lStep.Size = new System.Drawing.Size(32, 20);
             this.lStep.Text = "步骤";
             // 
             // tabControlTestInfo
@@ -594,7 +596,7 @@
             this.tabControlTestInfo.Location = new System.Drawing.Point(0, 0);
             this.tabControlTestInfo.Name = "tabControlTestInfo";
             this.tabControlTestInfo.SelectedIndex = 0;
-            this.tabControlTestInfo.Size = new System.Drawing.Size(670, 599);
+            this.tabControlTestInfo.Size = new System.Drawing.Size(781, 644);
             this.tabControlTestInfo.TabIndex = 1;
             // 
             // tabTestDescription
@@ -611,18 +613,18 @@
             this.tabTestDescription.Controls.Add(this.label2);
             this.tabTestDescription.Controls.Add(this.Objective);
             this.tabTestDescription.Controls.Add(this.label1);
-            this.tabTestDescription.Location = new System.Drawing.Point(4, 25);
+            this.tabTestDescription.Location = new System.Drawing.Point(4, 26);
             this.tabTestDescription.Name = "tabTestDescription";
             this.tabTestDescription.Padding = new System.Windows.Forms.Padding(3);
-            this.tabTestDescription.Size = new System.Drawing.Size(662, 570);
+            this.tabTestDescription.Size = new System.Drawing.Size(773, 614);
             this.tabTestDescription.TabIndex = 2;
             this.tabTestDescription.Text = "用例描述";
             this.tabTestDescription.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(13, 190);
             this.label5.Name = "label5";
@@ -634,7 +636,7 @@
             // 
             this.btnSave.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnSave.AutoSize = true;
-            this.btnSave.Location = new System.Drawing.Point(323, 324);
+            this.btnSave.Location = new System.Drawing.Point(521, 324);
             this.btnSave.MaximumSize = new System.Drawing.Size(100, 50);
             this.btnSave.MinimumSize = new System.Drawing.Size(80, 50);
             this.btnSave.Name = "btnSave";
@@ -646,56 +648,56 @@
             // 
             // txtTestSequence
             // 
-            this.txtTestSequence.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTestSequence.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTestSequence.Location = new System.Drawing.Point(104, 192);
             this.txtTestSequence.Multiline = true;
             this.txtTestSequence.Name = "txtTestSequence";
             this.txtTestSequence.ReadOnly = true;
             this.txtTestSequence.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtTestSequence.Size = new System.Drawing.Size(517, 116);
+            this.txtTestSequence.Size = new System.Drawing.Size(661, 116);
             this.txtTestSequence.TabIndex = 9;
             // 
             // txtPreTestCon
             // 
-            this.txtPreTestCon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPreTestCon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPreTestCon.Location = new System.Drawing.Point(104, 119);
             this.txtPreTestCon.Multiline = true;
             this.txtPreTestCon.Name = "txtPreTestCon";
             this.txtPreTestCon.ReadOnly = true;
             this.txtPreTestCon.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtPreTestCon.Size = new System.Drawing.Size(517, 65);
+            this.txtPreTestCon.Size = new System.Drawing.Size(661, 65);
             this.txtPreTestCon.TabIndex = 7;
             // 
             // txtConfiguration
             // 
-            this.txtConfiguration.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtConfiguration.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtConfiguration.Location = new System.Drawing.Point(104, 75);
             this.txtConfiguration.Name = "txtConfiguration";
             this.txtConfiguration.ReadOnly = true;
-            this.txtConfiguration.Size = new System.Drawing.Size(517, 26);
+            this.txtConfiguration.Size = new System.Drawing.Size(661, 26);
             this.txtConfiguration.TabIndex = 5;
             // 
             // txtObjective
             // 
-            this.txtObjective.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtObjective.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtObjective.Location = new System.Drawing.Point(104, 43);
             this.txtObjective.Name = "txtObjective";
             this.txtObjective.ReadOnly = true;
-            this.txtObjective.Size = new System.Drawing.Size(517, 26);
+            this.txtObjective.Size = new System.Drawing.Size(661, 26);
             this.txtObjective.TabIndex = 3;
             // 
             // txtIdentifier
             // 
-            this.txtIdentifier.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtIdentifier.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtIdentifier.Location = new System.Drawing.Point(104, 7);
             this.txtIdentifier.Name = "txtIdentifier";
             this.txtIdentifier.ReadOnly = true;
-            this.txtIdentifier.Size = new System.Drawing.Size(517, 26);
+            this.txtIdentifier.Size = new System.Drawing.Size(661, 26);
             this.txtIdentifier.TabIndex = 1;
             // 
             // label4
@@ -709,8 +711,8 @@
             // 
             // label3
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(10, 122);
             this.label3.Name = "label3";
@@ -720,8 +722,8 @@
             // 
             // label2
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(13, 75);
             this.label2.Name = "label2";
@@ -731,8 +733,8 @@
             // 
             // Objective
             // 
-            this.Objective.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.Objective.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Objective.AutoSize = true;
             this.Objective.Location = new System.Drawing.Point(12, 44);
             this.Objective.Name = "Objective";
@@ -742,8 +744,8 @@
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 13);
             this.label1.Name = "label1";
@@ -754,10 +756,10 @@
             // tabTestSetting
             // 
             this.tabTestSetting.Controls.Add(this.groupBox1);
-            this.tabTestSetting.Location = new System.Drawing.Point(4, 25);
+            this.tabTestSetting.Location = new System.Drawing.Point(4, 26);
             this.tabTestSetting.Name = "tabTestSetting";
             this.tabTestSetting.Padding = new System.Windows.Forms.Padding(3);
-            this.tabTestSetting.Size = new System.Drawing.Size(662, 570);
+            this.tabTestSetting.Size = new System.Drawing.Size(773, 614);
             this.tabTestSetting.TabIndex = 1;
             this.tabTestSetting.Text = "用例参数配置";
             this.tabTestSetting.UseVisualStyleBackColor = true;
@@ -773,7 +775,7 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(656, 564);
+            this.groupBox1.Size = new System.Drawing.Size(767, 608);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "配置用例";
@@ -835,18 +837,18 @@
             // ErrorInfo
             // 
             this.ErrorInfo.Controls.Add(this.treeListView1);
-            this.ErrorInfo.Location = new System.Drawing.Point(4, 25);
+            this.ErrorInfo.Location = new System.Drawing.Point(4, 26);
             this.ErrorInfo.Name = "ErrorInfo";
-            this.ErrorInfo.Size = new System.Drawing.Size(662, 570);
+            this.ErrorInfo.Size = new System.Drawing.Size(773, 590);
             this.ErrorInfo.TabIndex = 4;
             this.ErrorInfo.Text = "测试结果";
             this.ErrorInfo.UseVisualStyleBackColor = true;
             // 
             // treeListView1
             // 
-            this.treeListView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.treeListView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.treeListView1.CheckBoxes = System.Windows.Forms.CheckBoxesTypes.Simple;
             this.treeListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
@@ -854,9 +856,9 @@
             this.columnHeader4,
             this.columnHeader5,
             this.columnHeader6});
-            treeListViewItemCollectionComparer1.Column = 0;
-            treeListViewItemCollectionComparer1.SortOrder = System.Windows.Forms.SortOrder.Ascending;
-            this.treeListView1.Comparer = treeListViewItemCollectionComparer1;
+            treeListViewItemCollectionComparer2.Column = 0;
+            treeListViewItemCollectionComparer2.SortOrder = System.Windows.Forms.SortOrder.Ascending;
+            this.treeListView1.Comparer = treeListViewItemCollectionComparer2;
             this.treeListView1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.treeListView1.Location = new System.Drawing.Point(3, 3);
             this.treeListView1.Name = "treeListView1";
@@ -899,9 +901,9 @@
             this.coapBrowser.Controls.Add(this.toolStripNavigator);
             this.coapBrowser.Controls.Add(this.statusStrip3);
             this.coapBrowser.Controls.Add(this.statusStrip1);
-            this.coapBrowser.Location = new System.Drawing.Point(4, 25);
+            this.coapBrowser.Location = new System.Drawing.Point(4, 26);
             this.coapBrowser.Name = "coapBrowser";
-            this.coapBrowser.Size = new System.Drawing.Size(662, 570);
+            this.coapBrowser.Size = new System.Drawing.Size(773, 614);
             this.coapBrowser.TabIndex = 5;
             this.coapBrowser.Text = "CoAP浏览器";
             this.coapBrowser.UseVisualStyleBackColor = true;
@@ -924,7 +926,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(662, 439);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(773, 483);
             this.tableLayoutPanel1.TabIndex = 19;
             // 
             // dataGridViewOptions
@@ -941,16 +943,16 @@
             this.columnOptionValue,
             this.columnOptionInfo});
             this.dataGridViewOptions.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewOptions.Location = new System.Drawing.Point(287, 29);
+            this.dataGridViewOptions.Location = new System.Drawing.Point(335, 29);
             this.dataGridViewOptions.MultiSelect = false;
             this.dataGridViewOptions.Name = "dataGridViewOptions";
             this.dataGridViewOptions.ReadOnly = true;
             this.dataGridViewOptions.RowHeadersVisible = false;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.dataGridViewOptions.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.dataGridViewOptions.RowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridViewOptions.RowTemplate.Height = 23;
             this.dataGridViewOptions.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewOptions.Size = new System.Drawing.Size(372, 109);
+            this.dataGridViewOptions.Size = new System.Drawing.Size(435, 109);
             this.dataGridViewOptions.TabIndex = 3;
             // 
             // columnOption
@@ -994,7 +996,7 @@
             this.groupBoxPayload.Location = new System.Drawing.Point(3, 144);
             this.groupBoxPayload.Name = "groupBoxPayload";
             this.groupBoxPayload.Padding = new System.Windows.Forms.Padding(9, 3, 9, 3);
-            this.groupBoxPayload.Size = new System.Drawing.Size(656, 292);
+            this.groupBoxPayload.Size = new System.Drawing.Size(767, 336);
             this.groupBoxPayload.TabIndex = 1;
             this.groupBoxPayload.TabStop = false;
             this.groupBoxPayload.Text = "Payload (0)";
@@ -1008,7 +1010,7 @@
             this.tabControlPayload.Location = new System.Drawing.Point(9, 19);
             this.tabControlPayload.Name = "tabControlPayload";
             this.tabControlPayload.SelectedIndex = 0;
-            this.tabControlPayload.Size = new System.Drawing.Size(638, 270);
+            this.tabControlPayload.Size = new System.Drawing.Size(749, 314);
             this.tabControlPayload.TabIndex = 1;
             // 
             // tabPagePayloadText
@@ -1019,7 +1021,7 @@
             this.tabPagePayloadText.Location = new System.Drawing.Point(4, 26);
             this.tabPagePayloadText.Name = "tabPagePayloadText";
             this.tabPagePayloadText.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPagePayloadText.Size = new System.Drawing.Size(630, 240);
+            this.tabPagePayloadText.Size = new System.Drawing.Size(741, 284);
             this.tabPagePayloadText.TabIndex = 0;
             this.tabPagePayloadText.Text = "Text";
             // 
@@ -1035,7 +1037,7 @@
             this.textBoxPayloadString.Name = "textBoxPayloadString";
             this.textBoxPayloadString.ReadOnly = true;
             this.textBoxPayloadString.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxPayloadString.Size = new System.Drawing.Size(620, 230);
+            this.textBoxPayloadString.Size = new System.Drawing.Size(731, 274);
             this.textBoxPayloadString.TabIndex = 0;
             // 
             // tabPagePayloadRaw
@@ -1046,7 +1048,7 @@
             this.tabPagePayloadRaw.Location = new System.Drawing.Point(4, 26);
             this.tabPagePayloadRaw.Name = "tabPagePayloadRaw";
             this.tabPagePayloadRaw.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPagePayloadRaw.Size = new System.Drawing.Size(630, 240);
+            this.tabPagePayloadRaw.Size = new System.Drawing.Size(344, 0);
             this.tabPagePayloadRaw.TabIndex = 1;
             this.tabPagePayloadRaw.Text = "Raw";
             // 
@@ -1060,7 +1062,7 @@
             this.textBoxPayloadRaw.Name = "textBoxPayloadRaw";
             this.textBoxPayloadRaw.ReadOnly = true;
             this.textBoxPayloadRaw.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxPayloadRaw.Size = new System.Drawing.Size(620, 230);
+            this.textBoxPayloadRaw.Size = new System.Drawing.Size(338, 0);
             this.textBoxPayloadRaw.TabIndex = 0;
             // 
             // tabPagePayloadWeb
@@ -1069,7 +1071,7 @@
             this.tabPagePayloadWeb.Location = new System.Drawing.Point(4, 26);
             this.tabPagePayloadWeb.Name = "tabPagePayloadWeb";
             this.tabPagePayloadWeb.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPagePayloadWeb.Size = new System.Drawing.Size(630, 240);
+            this.tabPagePayloadWeb.Size = new System.Drawing.Size(741, 284);
             this.tabPagePayloadWeb.TabIndex = 3;
             this.tabPagePayloadWeb.Text = "Web";
             this.tabPagePayloadWeb.UseVisualStyleBackColor = true;
@@ -1082,7 +1084,7 @@
             this.webBrowserPayload.Location = new System.Drawing.Point(3, 3);
             this.webBrowserPayload.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowserPayload.Name = "webBrowserPayload";
-            this.webBrowserPayload.Size = new System.Drawing.Size(624, 234);
+            this.webBrowserPayload.Size = new System.Drawing.Size(735, 278);
             this.webBrowserPayload.TabIndex = 0;
             this.webBrowserPayload.WebBrowserShortcutsEnabled = false;
             // 
@@ -1105,12 +1107,12 @@
             this.dataGridViewHeaders.Name = "dataGridViewHeaders";
             this.dataGridViewHeaders.ReadOnly = true;
             this.dataGridViewHeaders.RowHeadersVisible = false;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.dataGridViewHeaders.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.dataGridViewHeaders.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridViewHeaders.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.dataGridViewHeaders.RowTemplate.Height = 21;
             this.dataGridViewHeaders.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewHeaders.Size = new System.Drawing.Size(278, 109);
+            this.dataGridViewHeaders.Size = new System.Drawing.Size(326, 109);
             this.dataGridViewHeaders.TabIndex = 2;
             // 
             // columnHeader
@@ -1139,7 +1141,7 @@
             this.groupBoxResources.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBoxResources.Location = new System.Drawing.Point(0, 70);
             this.groupBoxResources.Name = "groupBoxResources";
-            this.groupBoxResources.Size = new System.Drawing.Size(662, 61);
+            this.groupBoxResources.Size = new System.Drawing.Size(773, 61);
             this.groupBoxResources.TabIndex = 18;
             this.groupBoxResources.TabStop = false;
             this.groupBoxResources.Text = "Resources";
@@ -1174,7 +1176,7 @@
             this.toolStripDropDownButtonBehavior});
             this.toolStripOperation.Location = new System.Drawing.Point(0, 39);
             this.toolStripOperation.Name = "toolStripOperation";
-            this.toolStripOperation.Size = new System.Drawing.Size(662, 31);
+            this.toolStripOperation.Size = new System.Drawing.Size(773, 31);
             this.toolStripOperation.TabIndex = 17;
             // 
             // toolStripButtonGet
@@ -1183,7 +1185,7 @@
             this.toolStripButtonGet.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButtonGet.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonGet.Name = "toolStripButtonGet";
-            this.toolStripButtonGet.Size = new System.Drawing.Size(51, 28);
+            this.toolStripButtonGet.Size = new System.Drawing.Size(59, 28);
             this.toolStripButtonGet.Text = "GET";
             this.toolStripButtonGet.Click += new System.EventHandler(this.toolStripButtonGet_Click);
             // 
@@ -1193,7 +1195,7 @@
             this.toolStripButtonPost.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButtonPost.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonPost.Name = "toolStripButtonPost";
-            this.toolStripButtonPost.Size = new System.Drawing.Size(57, 28);
+            this.toolStripButtonPost.Size = new System.Drawing.Size(67, 28);
             this.toolStripButtonPost.Text = "POST";
             this.toolStripButtonPost.Click += new System.EventHandler(this.toolStripButtonPost_Click);
             // 
@@ -1203,7 +1205,7 @@
             this.toolStripButtonPut.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButtonPut.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonPut.Name = "toolStripButtonPut";
-            this.toolStripButtonPut.Size = new System.Drawing.Size(51, 28);
+            this.toolStripButtonPut.Size = new System.Drawing.Size(59, 28);
             this.toolStripButtonPut.Text = "PUT";
             this.toolStripButtonPut.Click += new System.EventHandler(this.toolStripButtonPut_Click);
             // 
@@ -1213,14 +1215,14 @@
             this.toolStripButtonDelete.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButtonDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonDelete.Name = "toolStripButtonDelete";
-            this.toolStripButtonDelete.Size = new System.Drawing.Size(69, 28);
+            this.toolStripButtonDelete.Size = new System.Drawing.Size(79, 28);
             this.toolStripButtonDelete.Text = "DELETE";
             this.toolStripButtonDelete.Click += new System.EventHandler(this.toolStripButtonDelete_Click);
             // 
             // toolStripLabelPayload
             // 
             this.toolStripLabelPayload.Name = "toolStripLabelPayload";
-            this.toolStripLabelPayload.Size = new System.Drawing.Size(47, 28);
+            this.toolStripLabelPayload.Size = new System.Drawing.Size(54, 28);
             this.toolStripLabelPayload.Text = "Payload";
             // 
             // toolStripTextBoxPayload
@@ -1234,7 +1236,7 @@
             this.toolStripButtonObserve.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButtonObserve.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonObserve.Name = "toolStripButtonObserve";
-            this.toolStripButtonObserve.Size = new System.Drawing.Size(75, 28);
+            this.toolStripButtonObserve.Size = new System.Drawing.Size(85, 28);
             this.toolStripButtonObserve.Text = "Observe";
             this.toolStripButtonObserve.Click += new System.EventHandler(this.toolStripButtonObserve_Click);
             // 
@@ -1244,7 +1246,7 @@
             this.toolStripButtonDiscover.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButtonDiscover.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonDiscover.Name = "toolStripButtonDiscover";
-            this.toolStripButtonDiscover.Size = new System.Drawing.Size(81, 28);
+            this.toolStripButtonDiscover.Size = new System.Drawing.Size(86, 28);
             this.toolStripButtonDiscover.Text = "Discover";
             this.toolStripButtonDiscover.Click += new System.EventHandler(this.toolStripButtonDiscover_Click);
             // 
@@ -1272,7 +1274,7 @@
             this.tsmiDraft18});
             this.toolStripDropDownButtonBehavior.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButtonBehavior.Name = "toolStripDropDownButtonBehavior";
-            this.toolStripDropDownButtonBehavior.Size = new System.Drawing.Size(66, 28);
+            this.toolStripDropDownButtonBehavior.Size = new System.Drawing.Size(72, 28);
             this.toolStripDropDownButtonBehavior.Text = "Behavior";
             // 
             // tsmiCON
@@ -1280,19 +1282,19 @@
             this.tsmiCON.Checked = true;
             this.tsmiCON.CheckState = System.Windows.Forms.CheckState.Indeterminate;
             this.tsmiCON.Name = "tsmiCON";
-            this.tsmiCON.Size = new System.Drawing.Size(208, 22);
+            this.tsmiCON.Size = new System.Drawing.Size(211, 22);
             this.tsmiCON.Text = "CON requests";
             // 
             // tsmiNON
             // 
             this.tsmiNON.Name = "tsmiNON";
-            this.tsmiNON.Size = new System.Drawing.Size(208, 22);
+            this.tsmiNON.Size = new System.Drawing.Size(211, 22);
             this.tsmiNON.Text = "NON requests";
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(205, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(208, 6);
             // 
             // tsmiRetranmissions
             // 
@@ -1300,94 +1302,94 @@
             this.tsmiRetranmissions.CheckOnClick = true;
             this.tsmiRetranmissions.CheckState = System.Windows.Forms.CheckState.Checked;
             this.tsmiRetranmissions.Name = "tsmiRetranmissions";
-            this.tsmiRetranmissions.Size = new System.Drawing.Size(208, 22);
+            this.tsmiRetranmissions.Size = new System.Drawing.Size(211, 22);
             this.tsmiRetranmissions.Text = "Retransmissions";
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(205, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(208, 6);
             // 
             // tsmiBlockLateNegotiation
             // 
             this.tsmiBlockLateNegotiation.Checked = true;
             this.tsmiBlockLateNegotiation.CheckState = System.Windows.Forms.CheckState.Checked;
             this.tsmiBlockLateNegotiation.Name = "tsmiBlockLateNegotiation";
-            this.tsmiBlockLateNegotiation.Size = new System.Drawing.Size(208, 22);
+            this.tsmiBlockLateNegotiation.Size = new System.Drawing.Size(211, 22);
             this.tsmiBlockLateNegotiation.Text = "Block late negotiation";
             // 
             // tsmiBlockSize16
             // 
             this.tsmiBlockSize16.Name = "tsmiBlockSize16";
-            this.tsmiBlockSize16.Size = new System.Drawing.Size(208, 22);
+            this.tsmiBlockSize16.Size = new System.Drawing.Size(211, 22);
             this.tsmiBlockSize16.Text = "Block size 16";
             // 
             // tsmiBlockSize32
             // 
             this.tsmiBlockSize32.Name = "tsmiBlockSize32";
-            this.tsmiBlockSize32.Size = new System.Drawing.Size(208, 22);
+            this.tsmiBlockSize32.Size = new System.Drawing.Size(211, 22);
             this.tsmiBlockSize32.Text = "Block size 32";
             // 
             // tsmiBlockSize64
             // 
             this.tsmiBlockSize64.Name = "tsmiBlockSize64";
-            this.tsmiBlockSize64.Size = new System.Drawing.Size(208, 22);
+            this.tsmiBlockSize64.Size = new System.Drawing.Size(211, 22);
             this.tsmiBlockSize64.Text = "Block size 64";
             // 
             // tsmiBlockSize128
             // 
             this.tsmiBlockSize128.Name = "tsmiBlockSize128";
-            this.tsmiBlockSize128.Size = new System.Drawing.Size(208, 22);
+            this.tsmiBlockSize128.Size = new System.Drawing.Size(211, 22);
             this.tsmiBlockSize128.Text = "Block size 128";
             // 
             // tsmiBlockSize256
             // 
             this.tsmiBlockSize256.Name = "tsmiBlockSize256";
-            this.tsmiBlockSize256.Size = new System.Drawing.Size(208, 22);
+            this.tsmiBlockSize256.Size = new System.Drawing.Size(211, 22);
             this.tsmiBlockSize256.Text = "Block size 256";
             // 
             // tsmiBlockSize512
             // 
             this.tsmiBlockSize512.Name = "tsmiBlockSize512";
-            this.tsmiBlockSize512.Size = new System.Drawing.Size(208, 22);
+            this.tsmiBlockSize512.Size = new System.Drawing.Size(211, 22);
             this.tsmiBlockSize512.Text = "Block size 512";
             // 
             // tsmiBlockSize1024
             // 
             this.tsmiBlockSize1024.Name = "tsmiBlockSize1024";
-            this.tsmiBlockSize1024.Size = new System.Drawing.Size(208, 22);
+            this.tsmiBlockSize1024.Size = new System.Drawing.Size(211, 22);
             this.tsmiBlockSize1024.Text = "Block size 1024";
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(205, 6);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(208, 6);
             // 
             // tsmiDraft03
             // 
             this.tsmiDraft03.Name = "tsmiDraft03";
-            this.tsmiDraft03.Size = new System.Drawing.Size(208, 22);
+            this.tsmiDraft03.Size = new System.Drawing.Size(211, 22);
             this.tsmiDraft03.Text = "draft-ietf-core-coap-03";
             this.tsmiDraft03.ToolTipText = "CoAP 03";
             // 
             // tsmiDraft08
             // 
             this.tsmiDraft08.Name = "tsmiDraft08";
-            this.tsmiDraft08.Size = new System.Drawing.Size(208, 22);
+            this.tsmiDraft08.Size = new System.Drawing.Size(211, 22);
             this.tsmiDraft08.Text = "draft-ietf-core-coap-08";
             this.tsmiDraft08.ToolTipText = "CoAP 08";
             // 
             // tsmiDraft12
             // 
             this.tsmiDraft12.Name = "tsmiDraft12";
-            this.tsmiDraft12.Size = new System.Drawing.Size(208, 22);
+            this.tsmiDraft12.Size = new System.Drawing.Size(211, 22);
             this.tsmiDraft12.Text = "draft-ietf-core-coap-12";
             this.tsmiDraft12.ToolTipText = "CoAP 12";
             // 
             // tsmiDraft13
             // 
             this.tsmiDraft13.Name = "tsmiDraft13";
-            this.tsmiDraft13.Size = new System.Drawing.Size(208, 22);
+            this.tsmiDraft13.Size = new System.Drawing.Size(211, 22);
             this.tsmiDraft13.Text = "draft-ietf-core-coap-13";
             this.tsmiDraft13.ToolTipText = "CoAP 13";
             // 
@@ -1396,7 +1398,7 @@
             this.tsmiDraft18.Checked = true;
             this.tsmiDraft18.CheckState = System.Windows.Forms.CheckState.Checked;
             this.tsmiDraft18.Name = "tsmiDraft18";
-            this.tsmiDraft18.Size = new System.Drawing.Size(208, 22);
+            this.tsmiDraft18.Size = new System.Drawing.Size(211, 22);
             this.tsmiDraft18.Text = "draft-ietf-core-coap-18";
             this.tsmiDraft18.ToolTipText = "Draft 18";
             // 
@@ -1410,7 +1412,7 @@
             this.toolStripComboBoxUrl});
             this.toolStripNavigator.Location = new System.Drawing.Point(0, 0);
             this.toolStripNavigator.Name = "toolStripNavigator";
-            this.toolStripNavigator.Size = new System.Drawing.Size(662, 39);
+            this.toolStripNavigator.Size = new System.Drawing.Size(773, 39);
             this.toolStripNavigator.TabIndex = 16;
             this.toolStripNavigator.Text = "toolStrip1";
             // 
@@ -1507,7 +1509,7 @@
             // 
             this.treeViewCases.CheckBoxes = true;
             this.treeViewCases.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.treeViewCases.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.treeViewCases.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.treeViewCases.HideSelection = false;
             this.treeViewCases.ImageIndex = 0;
             this.treeViewCases.ImageList = this.imageList1;
@@ -1517,7 +1519,7 @@
             this.treeViewCases.Name = "treeViewCases";
             this.treeViewCases.SelectedImageIndex = 0;
             this.treeViewCases.ShowNodeToolTips = true;
-            this.treeViewCases.Size = new System.Drawing.Size(191, 599);
+            this.treeViewCases.Size = new System.Drawing.Size(222, 644);
             this.treeViewCases.TabIndex = 0;
             this.treeViewCases.AfterLabelEdit += new System.Windows.Forms.NodeLabelEditEventHandler(this.treeViewCases_AfterLabelEdit);
             this.treeViewCases.AfterCheck += new System.Windows.Forms.TreeViewEventHandler(this.treeViewCases_AfterCheck);
@@ -1526,7 +1528,7 @@
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 61);
+            this.splitContainer1.Location = new System.Drawing.Point(0, 37);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -1536,8 +1538,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.tabControlTestInfo);
-            this.splitContainer1.Size = new System.Drawing.Size(866, 599);
-            this.splitContainer1.SplitterDistance = 191;
+            this.splitContainer1.Size = new System.Drawing.Size(1008, 644);
+            this.splitContainer1.SplitterDistance = 222;
             this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 2;
             // 
@@ -1545,7 +1547,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(866, 660);
+            this.ClientSize = new System.Drawing.Size(1008, 681);
             this.Controls.Add(this.statusStrip2);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.toolStrip1);
@@ -1554,7 +1556,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormMain";
             this.Text = "CoAP协议一致性测试";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.Resize += new System.EventHandler(this.FormMain_Resize);
             this.menuStrip1.ResumeLayout(false);
@@ -1649,7 +1650,6 @@
         private System.Windows.Forms.ToolTip toolTip2;
         private System.Windows.Forms.ToolTip toolTip3;
         private System.Windows.Forms.ToolTip toolTip4;
-        private System.Windows.Forms.TabControl tabControlTestInfo;
         private System.Windows.Forms.TabPage tabTestDescription;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnSave;
@@ -1681,7 +1681,6 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelVersion;
-        private System.Windows.Forms.TreeView treeViewCases;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.ToolTip toolTip5;
         private System.Windows.Forms.ToolTip toolTip6;
@@ -1704,7 +1703,6 @@
         private System.Windows.Forms.TextBox textBoxPayloadString;
         private System.Windows.Forms.TabPage tabPagePayloadRaw;
         private System.Windows.Forms.TextBox textBoxPayloadRaw;
-        private System.Windows.Forms.TabPage tabPagePayloadWeb;
         private System.Windows.Forms.WebBrowser webBrowserPayload;
         private System.Windows.Forms.DataGridView dataGridViewHeaders;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnHeader;
@@ -1742,7 +1740,9 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiDraft18;
         private System.Windows.Forms.ToolStripMenuItem 帮助ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 打开服务器端ToolStripMenuItem;
-
+        public System.Windows.Forms.TreeView treeViewCases;
+        public System.Windows.Forms.TabControl tabControlTestInfo;
+        public System.Windows.Forms.TabPage tabPagePayloadWeb;
     }
 }
 

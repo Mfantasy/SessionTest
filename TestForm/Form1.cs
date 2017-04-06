@@ -1,4 +1,5 @@
-﻿using SessionTest;
+﻿using CoAP.Tester;
+using SessionTest;
 using SessionTest.Controls;
 using System;
 using System.Collections.Generic;
@@ -39,7 +40,13 @@ namespace TestForm
         
         private void button1_Click(object sender, EventArgs e)
         {
-            //CreateSocket;                      
+            int i = 0;
+            foreach (TreeNode item in treeView1.Nodes[0].Nodes)
+            {
+                item.Text = "MQTT"+i.ToString();
+                i++;
+            }
+            
         }
 
         void Test(int i)

@@ -63,9 +63,39 @@ namespace SessionTest
             fm.Parent = panelCoap测试;
             fm.FormBorderStyle = FormBorderStyle.None;
             fm.Show();
-            ThreadPool.QueueUserWorkItem(ScanIpsL);
+                           
+            //fm.BringToFront();
+            if (CustomConfig.OpenIpScan)
+            {
+                ThreadPool.QueueUserWorkItem(ScanIpsL);
+            }
+            dvCn.Rows.Add("会话层协议", "TCP", "192.168.0.2", DateTime.Now.ToString());
+            dvCn.Rows.Add("会话层协议", "NB-IOT", "61.46.23.232", DateTime.Now.ToString());
+            dvCn.Rows.Add("会话层协议", "TCP/UDP", "192.168.0.5", DateTime.Now.ToString());
+            dvCn.Rows.Add("应用层协议", "CoAP", "119.16.42.43", DateTime.Now.ToString());
+            dvCn.Rows.Add("应用层协议", "MQTT", "192.168.0.123", DateTime.Now.ToString());
+            dvCn.Rows.Add("会话层协议", "GPRS", "119.16.42.41", DateTime.Now.ToString());
+            dvCn.Rows.Add("会话层协议", "NB-IOT", "192.168.0.56", DateTime.Now.ToString());
+            dvCn.Rows.Add("会话层协议", "GPRS", "119.16.42.48", DateTime.Now.ToString());
+            dvCn.Rows.Add("会话层协议", "NB-IOT", "192.168.0.156", DateTime.Now.ToString());
         }
 
+        private void MainForm_Shown(object sender, EventArgs e)
+        {
+            FormMain fm2 = new FormMain();
+            fm2.TopLevel = false;
+            fm2.Parent = panelMQTT测试;
+            fm2.FormBorderStyle = FormBorderStyle.None;
+            fm2.Show();
+            foreach (TreeNode item in fm2.treeViewCases.Nodes[0].Nodes)
+            {
+                item.Text = item.Text.Replace("COAP", "MQTT");
+                
+            }
+            fm2.tabControlTestInfo.Controls.RemoveAt(3);
+            string reportUrl = Path.GetFullPath("Report/Report.xml");
+            webBrowser1.Url = new Uri(reportUrl);
+        }
 
         #region 端口扫描
         void AddDataSc(string x)
@@ -319,5 +349,7 @@ namespace SessionTest
             wait.ShowDialog();
             return;
         }
+
+      
     }
 }

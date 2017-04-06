@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="result.xsl"?>
+<root>
+  <testcaseresult>
+    <testcasename group="组1">New Test0</testcasename>
+    <result>FALSE</result>
+    <testcaseitem>
+      <request>CON Request GET</request>
+      <response>
+        <name>ACK Response Code=69</name>
+        <responseitem>
+          <item>
+            <names>type</names>
+            <expected>NON</expected>
+            <received>ACK</received>
+            <errorinfo>Expected type NON, but got ACK</errorinfo>
+          </item>
+          <item>
+            <names>code</names>
+            <expected>0</expected>
+            <received>69</received>
+            <errorinfo>Expected code 0, but got 69</errorinfo>
+          </item>
+        </responseitem>
+      </response>
+      <request>CON Request GET</request>
+      <response>
+        <name>ACK Response Code=69</name>
+        <responseitem>
+          <item>
+            <names>type</names>
+            <expected>NON</expected>
+            <received>ACK</received>
+            <errorinfo>Expected type NON, but got ACK</errorinfo>
+          </item>
+          <item>
+            <names>code</names>
+            <expected>0</expected>
+            <received>69</received>
+            <errorinfo>Expected code 0, but got 69</errorinfo>
+          </item>
+        </responseitem>
+      </response>
+    </testcaseitem>
+  </testcaseresult>
+  <testcaseresult>
+    <testcasename group="组1">New Test1</testcasename>
+    <result>TRUE</result>
+    <testcaseitem>
+      <request>CON Request GET</request>
+      <response>
+        <name>ACK Response Code=69</name>
+        <responseitem />
+      </response>
+    </testcaseitem>
+  </testcaseresult>
+  <testcaseresult>
+    <testcasename group="组1">New Test2</testcasename>
+    <result>FALSE</result>
+    <testcaseitem>
+      <request>CON Request GET</request>
+      <response>
+        <name>ACK Response Code=69</name>
+        <responseitem>
+          <item>
+            <names>payload</names>
+            <expected>f</expected>
+            <received>2C3B540A</received>
+            <errorinfo>Expected payload f, but got 2C3B540A</errorinfo>
+          </item>
+          <item>
+            <names>Location-Path</names>
+            <expected>/path</expected>
+            <received>
+            </received>
+            <errorinfo>Expected Location-Path /path, but got nothing</errorinfo>
+          </item>
+        </responseitem>
+      </response>
+    </testcaseitem>
+  </testcaseresult>
+</root>

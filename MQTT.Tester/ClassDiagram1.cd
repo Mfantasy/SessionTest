@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CoAP.Tester.FlowTest2" Collapsed="true">
+    <Position X="5.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACgAAAAAAAgAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>ITest.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CoAP.Tester.FlowTest" BaseTypeListCollapsed="true">
+    <Position X="1.75" Y="3.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="CoAP.Tester.FlowTest.TestContext" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>FlowTest.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAChIAAAAAAgAAEAAAAAAAQAAAAAgAAAAAABAAAAAAI=</HashCode>
+      <FileName>FlowTest.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CoAP.Tester.Steps" Collapsed="true">
+    <Position X="7.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAACAgAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FlowTest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CoAP.Tester.RequestBuildStep" BaseTypeListCollapsed="true">
+    <Position X="2.75" Y="8" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAIAAAAAEAAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>FlowTest.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="RequestBuilder" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CoAP.Tester.ResponseCheckStep" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEEAAAAAAAAAEAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>FlowTest.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CoAP.Tester.RequestBuilders" Collapsed="true">
+    <Position X="7.5" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAEAAAAAAAwCAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>RequestBuilders.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CoAP.Tester.MethodBuilder" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RequestBuilders.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CoAP.Tester.MessageTypeBuilder" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RequestBuilders.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CoAP.Tester.TokenBuilder" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAABAAA=</HashCode>
+      <FileName>RequestBuilders.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CoAP.Tester.OptionBuilder" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAEAAAAgAAAAAAAgAAgAAAAAAAAAAA=</HashCode>
+      <FileName>RequestBuilders.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CoAP.Tester.PayloadBuilder" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAAgAAAAAAQAAAAACA=</HashCode>
+      <FileName>RequestBuilders.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CoAP.Tester.GroupBuilder" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.75" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACIAAAAAAAAAABAQAAAABAQAAAAggAAAAAAAAABwIAA=</HashCode>
+      <FileName>RequestBuilders.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="CoAP.Tester.ITest">
+    <Position X="1.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACgAAAAAAAgAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>ITest.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CoAP.Tester.ITestContext" Collapsed="true">
+    <Position X="7.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>FlowTest.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CoAP.Tester.IStep" Collapsed="true">
+    <Position X="3.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FlowTest.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CoAP.Tester.IRequestBuilder">
+    <Position X="5" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IRequestBuilder.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="宋体" Size="9" />
+</ClassDiagram>

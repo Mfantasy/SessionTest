@@ -53,10 +53,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>24A02DE28E538F169E25A9253906D625C316943D</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>6424B9291C7019746617FE3B298286FBF9533F0B</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>CoAP.Tester_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>CoAP.Tester_1_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -156,6 +156,7 @@
       <DependentUpon>ResponseCheckStepForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
+    <None Include="CoAP.Tester_1_TemporaryKey.pfx" />
     <None Include="CoAP.Tester_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
